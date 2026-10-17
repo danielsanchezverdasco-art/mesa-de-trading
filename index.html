@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mesa de Trading — Floor</title>
+<script>
+/* generado por build_web.py — no editar a mano */
+window.MESA_DATA = {
+  "generado_utc": "2026-10-17 23:50 UTC",
+  "aviso": "MODO SIMULACIÓN — nada garantiza beneficios",
+  "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
+  "modo": "simulacion",
+  "config": {
+    "capital_inicial": 250.0,
+    "moneda": "EUR",
+    "riesgo": {
+      "riesgo_max_por_operacion_pct": 1.0,
+      "rb_minimo": 2.5,
+      "rb_referencia": "TP2",
+      "apalancamiento_max": 3,
+      "no_operar_min_antes_noticias_alto_impacto": 30,
+      "max_operaciones_abiertas": 4
+    },
+    "mercados": [
+      "cripto",
+      "acciones_eeuu",
+      "forex",
+      "memecoins"
+    ],
+    "temporalidades": [
+      "1h",
+      "4h"
+    ]
+  },
+  "stats": {
+    "capital_inicial": 250.0,
+    "aportaciones": 0.0,
+    "aportaciones_detalle": [],
+    "capital_invertido": 250.0,
+    "equity": 250.0,
+    "pnl_realizado": 0,
+    "pnl_por_mercado": {},
+    "ganancias_netas": 0.0,
+    "abiertas": 0,
+    "pendientes": 1,
+    "cerradas": 0,
+    "total_operaciones": 1,
+    "win_rate_pct": "sin datos",
+    "profit_factor": "sin datos",
+    "max_drawdown_pct": "sin datos",
+    "r_medio": "sin datos",
+    "curva_capital": [
+      {
+        "fecha": "2026-10-17",
+        "equity": 250.0,
+        "evento": "capital_inicial"
+      }
+    ],
+    "moneda": "EUR"
+  },
+  "journal": [
+    {
+      "id": "T0001",
+      "fecha_apertura": "2026-10-17 23:39",
+      "activo": "ETHUSDT",
+      "mercado": "cripto",
+      "direccion": "short",
+      "entrada": "2435.0",
+      "sl": "2470.0",
+      "tp1": "2394.0",
+      "tp2": "2324.0",
+      "tp3": "2300.0",
+      "tamano": "0.0803786",
+      "riesgo_eur": "2.5",
+      "apalancamiento": "0.70",
+      "estado": "pendiente",
+      "fecha_cierre": "",
+      "precio_cierre": "",
+      "pnl_eur": "",
+      "r_multiple": "",
+      "esceptico": "convencido",
+      "notas": "SIMULADA. Limit sell en pullback a EMA20 4h/resistencia 1h 2441. Expira 48h. TP2 = referencia R/B."
+    }
+  ],
+  "informe": {
+    "archivo": "informe-2026-10-17.md",
+    "fecha": "2026-10-17",
+    "sesgo_macro": "RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta.",
+    "sentimiento_score": "55",
+    "sentimiento_label": "Greed",
+    "dominancia_btc": "59,48%",
+    "setups": [
+      "S1 ETH short (limit)",
+      "S2 BTC short (limit)",
+      "S3 BTC long (limit)",
+      "S4 EUR/USD long (plan lunes)"
+    ],
+    "aprobados": [
+      "S1 ETHUSDT: short · CRO: ✅ **APROBADO**"
+    ],
+    "rechazados": [
+      "S2 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)",
+      "S3 BTCUSDT: long · CRO: ❌ Rechazado (contra-tendencia)",
+      "S4 EURUSD: long · CRO: ❌ Rechazado / vigilancia lunes"
+    ],
+    "debate_esceptico": "**S1 ETH short** — Escéptico: \"ETH ya está sobre soporte 2.393 con RSI 4h 40; las ballenas rotaron BTC→ETH la semana pasada; hay ~900 M$ en cortos BTC/ETH en Hyperliquid: squeeze.\" Trader: \"No vendo en soporte: la orden es limit en el *rebote* a 2.435 (EMA20 4h), con SL sobre la estructura 2.467. ETH/BTC débil (ETH −6,3% bajo EMA200 4h), dominancia BTC 59,5%, F&G aún 55 con margen de caer, macro risk-off (VIX 20, 10a 5,1%). Si hay squeeze sobre 2",
+    "veredicto_esceptico": "CONVENCIDO · NO convencido · NO convencido · NO convencido",
+    "resumen_coo": "- **T0001 ETHUSDT short — PENDIENTE (limit sell 2.435)**, SL 2.470, TP 2.394/2.324/2.300, 0,0804 ETH, riesgo 2,50 €, esceptico=convencido. Gestión: 40% TP1 + SL a breakeven, 40% TP2, 20% TP3 (el script simplifica a cierre total en TP2). Expira 48 h si no se activa."
+  },
+  "roles": [
+    {
+      "id": "macro",
+      "nombre": "Analista Macro",
+      "titulo": "Analista Macro y Fundamental",
+      "funciones": [
+        "Sesgo BTC/ETH/SPX",
+        "Dominancia BTC",
+        "Noticias alto impacto",
+        "Contexto fundamental"
+      ],
+      "accion": "investigando",
+      "bocadillo": "Sesgo macro: RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta. · Dom BTC:…",
+      "tag": "RISK-OFF moderado / bajista…"
+    },
+    {
+      "id": "sentimiento",
+      "nombre": "Analista Sentimiento",
+      "titulo": "Analista de Sentimiento",
+      "funciones": [
+        "Fear & Greed",
+        "Sesgo social",
+        "Contrarian check",
+        "Volatilidad percibida"
+      ],
+      "accion": "lupa",
+      "bocadillo": "Fear & Greed: 55 (Greed)",
+      "tag": "FEAR&GREED 55 Greed"
+    },
+    {
+      "id": "trader",
+      "nombre": "Trader Cuantitativo",
+      "titulo": "Trader Cuantitativo",
+      "funciones": [
+        "Setups 1h/4h",
+        "EMA/RSI/ATR",
+        "Soportes/resistencias",
+        "R/B ≥ 2,5"
+      ],
+      "accion": "graficos",
+      "bocadillo": "Setups: 4 · S1 ETH short (limit)",
+      "tag": "BTC 81396.01"
+    },
+    {
+      "id": "cro",
+      "nombre": "Director de Riesgo",
+      "titulo": "Director de Riesgo (CRO)",
+      "funciones": [
+        "Máx 1% riesgo",
+        "R/B ≥ 1:2,5",
+        "Apalancamiento ≤ 3x",
+        "Filtro noticias y memecoins",
+        "Alta convicción: hasta 2% / ≤10x"
+      ],
+      "accion": "sello",
+      "bocadillo": "Aprobados: 1 · Rechazados: 3",
+      "tag": "OK 1 · NO 3"
+    },
+    {
+      "id": "ejecucion",
+      "nombre": "Ejecución",
+      "titulo": "Ejecución",
+      "funciones": [
+        "Registro en diario",
+        "Tamaño de posición",
+        "SL/TP escalonados",
+        "Paper trading"
+      ],
+      "accion": "teclear",
+      "bocadillo": "Abiertas: 0 · Pendientes: 1 · Cerradas: 0",
+      "tag": "PEND 1"
+    },
+    {
+      "id": "auditor",
+      "nombre": "Auditor",
+      "titulo": "Auditor",
+      "funciones": [
+        "Win rate / PF",
+        "Max drawdown",
+        "Cumplimiento reglas",
+        "Revisión post-trade"
+      ],
+      "accion": "papeles",
+      "bocadillo": "WR: sin datos · PF: sin datos · MDD: sin datos",
+      "tag": "STATS"
+    },
+    {
+      "id": "esceptico",
+      "nombre": "El Escéptico",
+      "titulo": "El Escéptico (abogado del diablo)",
+      "funciones": [
+        "Dice NO por defecto",
+        "Debate cada operación",
+        "Exige datos antes de sí",
+        "Veto hasta convencerse"
+      ],
+      "accion": "asentir",
+      "bocadillo": "Debate: **S1 ETH short** — Escéptico: \"ETH ya está sobre soporte 2.393 con RSI 4h 40; las ballenas…",
+      "tag": "SÍ/NO"
+    },
+    {
+      "id": "coo",
+      "nombre": "COO",
+      "titulo": "COO — Mesa de Trading",
+      "funciones": [
+        "Coordina al equipo",
+        "Prioriza setups",
+        "Informa a Daniel",
+        "Modo simulación"
+      ],
+      "accion": "coordinar",
+      "bocadillo": "- **T0001 ETHUSDT short — PENDIENTE (limit sell 2.435)**, SL 2.470, TP 2.394/2.324/2.300,…",
+      "tag": "SIM 250€"
+    }
+  ],
+  "precios": {
+    "BTC": {
+      "precio": 81396.01,
+      "cambio_pct": -0.28,
+      "fuente": "Binance",
+      "hora": "2026-10-17 23:50 UTC"
+    },
+    "ETH": {
+      "precio": 2398.26,
+      "cambio_pct": -1.05,
+      "fuente": "Binance",
+      "hora": "2026-10-17 23:50 UTC"
+    },
+    "SOL": {
+      "precio": 103.22,
+      "cambio_pct": -1.13,
+      "fuente": "Binance",
+      "hora": "2026-10-17 23:50 UTC"
+    },
+    "SPY": {
+      "precio": 763.25,
+      "cambio_pct": -1.97,
+      "fuente": "Yahoo",
+      "hora": "2026-10-16 20:00 UTC"
+    },
+    "QQQ": {
+      "precio": 709.8,
+      "cambio_pct": -5.52,
+      "fuente": "Yahoo",
+      "hora": "2026-10-16 20:00 UTC"
+    },
+    "NVDA": {
+      "precio": 214.13,
+      "cambio_pct": -6.61,
+      "fuente": "Yahoo",
+      "hora": "2026-10-16 20:00 UTC"
+    },
+    "EURUSD": {
+      "precio": 1.1242,
+      "cambio_pct": 0.33,
+      "fuente": "Yahoo",
+      "hora": "2026-10-17 12:20 UTC"
+    },
+    "VIX": {
+      "precio": 19.99,
+      "cambio_pct": 31.43,
+      "fuente": "Yahoo",
+      "hora": "2026-10-16 20:15 UTC"
+    }
+  },
+  "squawk": [
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "MACRO · RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta."
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "SENT · Fear&Greed 55 Greed"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "QUANT · setup S1 ETH short (limit)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "QUANT · setup S2 BTC short (limit)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "QUANT · setup S3 BTC long (limit)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "QUANT · setup S4 EUR/USD long (plan lunes)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "ESCÉPTICO · CONVENCIDO · NO convencido · NO convencido · NO convencido"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "CRO · APROBADO S1 ETHUSDT: short · CRO: ✅ **APROBADO**"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "CRO · RECHAZADO S2 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "CRO · RECHAZADO S3 BTCUSDT: long · CRO: ❌ Rechazado (contra-tendencia)"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "CRO · RECHAZADO S4 EURUSD: long · CRO: ❌ Rechazado / vigilancia lunes"
+    },
+    {
+      "hora": "2026-10-17 23:39",
+      "msg": "EJEC · T0001 ETHUSDT short · pendiente"
+    },
+    {
+      "hora": "2026-10-17 23:39",
+      "msg": "ESCÉPTICO · T0001 veredicto: convencido"
+    },
+    {
+      "hora": "2026-10-17 23:40",
+      "msg": "AUDITOR · equity 250.0 EUR · abiertas 0"
+    },
+    {
+      "hora": "2026-10-17 23:50 UTC",
+      "msg": "TAPE · BTC 81396.01 (-0.28%) · 2026-10-17 23:50 UTC"
+    },
+    {
+      "hora": "2026-10-17 23:50 UTC",
+      "msg": "TAPE · ETH 2398.26 (-1.05%) · 2026-10-17 23:50 UTC"
+    },
+    {
+      "hora": "2026-10-16 20:15 UTC",
+      "msg": "TAPE · VIX 19.99 (31.43%) · 2026-10-16 20:15 UTC"
+    }
+  ],
+  "tags": {
+    "sentimiento": "FEAR&GREED 55 Greed",
+    "macro": "RISK-OFF moderado / bajista…",
+    "trader": "BTC 81396.01",
+    "cro": "OK 1 · NO 3",
+    "esceptico": "SÍ/NO",
+    "ejecucion": "PEND 1",
+    "auditor": "STATS",
+    "coo": "SIM 250€"
+  },
+  "cuenta": {
+    "equity": 250.0,
+    "pnl_realizado": 0,
+    "capital_inicial": 250.0,
+    "capital_invertido": 250.0,
+    "riesgo_abierto_eur": 2.5,
+    "moneda": "EUR",
+    "abiertas": 0,
+    "pendientes": 1
+  }
+};
+
+</script>
+<style>
+@font-face{font-family:'Pixel';src:local('Courier New'),local('monospace')}
+:root{
+  --bg:#0c0e14; --floor:#1a1520; --wood:#3d2a1a; --wood2:#5a3d28; --gold:#c9a227;
+  --gold2:#e8c84a; --ink:#e8dcc8; --muted:#8a7a68; --panel:#12151e; --card:#1a1f2c;
+  --ok:#5dcc7a; --bad:#e85a5a; --accent:#5bdbb0; --warn:#f0b429;
+  --pixel:2px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Courier New',Courier,monospace;image-rendering:pixelated}
+.banner{background:linear-gradient(90deg,#4a3010,#7a5018);color:#fff8e0;text-align:center;padding:.5rem;font-weight:700;border-bottom:3px solid var(--gold);font-size:.85rem;letter-spacing:.04em}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;padding:.55rem .9rem;background:#0a0c12;border-bottom:2px solid #2a2430}
+header h1{margin:0;font-size:1rem;color:var(--gold2);text-transform:uppercase;letter-spacing:.08em}
+header .meta{color:var(--muted);font-size:.72rem}
+nav{display:flex;gap:.3rem;flex-wrap:wrap;margin-left:auto}
+nav button{background:#1a1520;color:var(--ink);border:2px solid #3a3028;padding:.4rem .7rem;cursor:pointer;font-family:inherit;font-size:.78rem;font-weight:700;image-rendering:pixelated}
+nav button:hover{border-color:var(--gold)}
+nav button.active{background:var(--gold);color:#1a1008;border-color:var(--gold2)}
+main{padding:.75rem;max-width:1480px;margin:0 auto}
+.tab{display:none}.tab.active{display:block}
+.sin{color:var(--muted);font-style:italic}
+.badge{display:inline-block;padding:.1rem .4rem;border:1px solid #4a4030;font-size:.7rem;background:#221c18}
+.badge.abierta,.badge.pendiente{color:#9ecfff;border-color:#3a5a7a}
+.badge.cerrada{color:var(--ok);border-color:#2a5a3a}
+
+/* ===== LAYOUT OFICINA ===== */
+.floor-wrap{display:grid;grid-template-columns:1fr 280px;gap:.65rem}
+@media(max-width:980px){.floor-wrap{grid-template-columns:1fr}}
+.floor{
+  position:relative;overflow:hidden;min-height:560px;border:3px solid #2a3040;border-radius:3px;
+  background:
+    linear-gradient(180deg,rgba(8,10,16,.4) 0 78px,transparent 78px),
+    repeating-linear-gradient(90deg,#2a3344 0 16px,#243040 16px 32px),
+    repeating-linear-gradient(0deg,#283344 0 16px,#222c3c 16px 32px);
+  box-shadow:inset 0 0 50px rgba(0,0,0,.5);
+}
+.skyline{position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(180deg,#080a14,#14182a);border-bottom:3px solid #2a2438;z-index:0}
+.skyline .win{position:absolute;bottom:8px;width:8px;height:12px;background:#3a4a2a;box-shadow:0 0 5px #6a8a3a;animation:blink 3s ease-in-out infinite alternate}
+@keyframes blink{from{opacity:.35}to{opacity:1}}
+.clock{position:absolute;top:10px;right:12px;z-index:2;width:36px;height:36px;border:3px solid var(--gold);border-radius:50%;background:#1a1520;display:flex;align-items:center;justify-content:center;font-size:.5rem;color:var(--gold2)}
+.wall-monitors{position:absolute;top:42px;left:50%;transform:translateX(-50%);z-index:1;display:flex;gap:6px}
+.wall-mon{width:100px;height:40px;background:#0a0c10;border:2px solid #333;padding:2px;font-size:.5rem;color:var(--accent);overflow:hidden}
+.wall-mon .title{color:var(--gold);font-size:.45rem}
+.ticker{position:absolute;top:88px;left:0;right:0;height:18px;z-index:3;background:#0a0c10;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-block;padding:.15rem 0;animation:marquee 28s linear infinite;font-size:.65rem}
+.ticker .up{color:var(--ok)}.ticker .dn{color:var(--bad)}.ticker .sep{color:var(--muted);margin:0 .7rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* wooden floor plan */
+.plan{position:absolute;inset:110px 8px 8px;z-index:2}
+.aisle{
+  position:absolute;left:50%;top:0;bottom:0;width:40px;transform:translateX(-50%);
+  background:linear-gradient(90deg,#2e3a4c,#3a4860 35%,#3a4860 65%,#2e3a4c);opacity:.85;z-index:0;
+  border-left:1px dashed #4a5a72;border-right:1px dashed #4a5a72;
+}
+.decor{position:absolute;z-index:1;font-size:.55rem;color:var(--gold);text-align:center;line-height:1.1;pointer-events:none}
+.decor.plant{font-size:1.1rem;filter:saturate(1.2)}
+.decor.coffee{background:#1a1520;border:2px solid #5a4030;padding:.25rem .35rem;font-size:.55rem;color:var(--ink)}
+.decor.meet{
+  width:110px;height:70px;background:radial-gradient(ellipse,#5a4030,#3d2a1a);
+  border:2px solid var(--gold);border-radius:40%;box-shadow:3px 4px 0 #1a1008;
+  display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:.5rem;
+}
+.decor.bull{font-size:.7rem;bottom:auto}
+
+/* small desks grid */
+.desks{
+  position:relative;z-index:2;display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:10px 14px; height:100%; padding:6px 4px 4px;
+  align-content:start;
+}
+@media(max-width:900px){.desks{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.desks{grid-template-columns:repeat(2,1fr)}}
+
+.desk{
+  position:relative;width:100%;max-width:130px;margin:0 auto;
+  cursor:pointer; transition:transform .12s;
+}
+.desk:hover,.desk.focus{transform:translateY(-2px);z-index:4}
+.desk.coo{max-width:150px}
+.desk .plate{
+  background:#0e1018;border:1px solid var(--gold);color:var(--gold2);
+  font-size:.52rem;font-weight:800;text-align:center;padding:.1rem .2rem;
+  margin:0 auto 2px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.tag-float{
+  position:absolute;top:-8px;left:50%;transform:translateX(-50%);z-index:5;
+  background:#0a0c12;border:1px solid var(--gold);color:var(--gold2);
+  font-size:.48rem;padding:.08rem .25rem;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  animation:bob 2.2s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-2px)}}
+.tag-float.no{border-color:var(--bad);color:var(--bad)}
+.tag-float.ok{border-color:var(--ok);color:var(--ok)}
+
+.station{position:relative;height:78px}
+.desk-top{
+  position:absolute;left:8%;right:8%;top:18px;height:28px;
+  background:linear-gradient(180deg,#6b4a32,#4a3222);border:2px solid #8a6a48;
+  box-shadow:2px 3px 0 #1a1008;z-index:1;
+}
+.desk-leg{position:absolute;bottom:8px;width:4px;height:16px;background:#2a1c12;z-index:0}
+.desk-leg.l{left:14%}.desk-leg.r{right:14%}
+.chair{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:22px;height:14px;background:#2a2430;border:2px solid #3a3545;border-radius:2px 2px 0 0;z-index:0;
+}
+.monitors{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;gap:2px;z-index:2}
+.mon{width:18px;height:16px;background:#050608;border:2px solid #2a2a30;position:relative}
+.mon .scr{position:absolute;inset:1px;background:#0a1810;overflow:hidden}
+.mon .cl{position:absolute;left:0;right:0;bottom:1px;height:8px;opacity:.9;
+  background:repeating-linear-gradient(90deg,transparent 0 1px,var(--accent) 1px 2px);
+  clip-path:polygon(0 80%,25% 35%,50% 55%,75% 15%,100% 40%,100% 100%,0 100%);
+  animation:chart 2s ease-in-out infinite alternate}
+@keyframes chart{from{transform:translateX(-1px)}to{transform:translateX(1px)}}
+.kbd{position:absolute;top:36px;left:50%;transform:translateX(-50%);width:20px;height:5px;background:#1a1a22;border:1px solid #333;z-index:2}
+
+.person{width:20px;height:34px;position:absolute;bottom:6px;left:50%;margin-left:-10px;z-index:3;transition:left .8s ease, bottom .8s ease, opacity .3s}
+.person .head{width:10px;height:10px;background:var(--skin,#e8b890);margin:0 auto;position:relative}
+.person .hair{position:absolute;top:-2px;left:1px;right:1px;height:4px;background:var(--hair,#2a1a10)}
+.person .eye{position:absolute;width:2px;height:2px;background:#111;top:4px}
+.person .eye.l{left:2px}.person .eye.r{right:2px}
+.person .body{width:12px;height:12px;background:var(--shirt,#4a6a9a);margin:1px auto 0;position:relative}
+.person .arm{position:absolute;width:3px;height:8px;background:var(--skin,#e8b890);top:1px;transform-origin:top}
+.person .arm.l{left:-3px}.person .arm.r{right:-3px}
+.person .legs{display:flex;justify-content:center;gap:2px}
+.person .leg{width:4px;height:9px;background:var(--pants,#1a2030)}
+.person.teclear .arm.l,.person.teclear .arm.r{animation:type .28s infinite alternate}
+.person.graficos .arm.r{animation:point 1.2s ease-in-out infinite alternate}
+.person.lupa .arm.r,.person.investigando .arm.r{animation:lupa 1.4s ease-in-out infinite}
+.person.papeles .arm.l{animation:pass 2s ease-in-out infinite}
+.person.sello .arm.r{animation:stamp 1.8s ease-in-out infinite}
+.person.negar .head{animation:no .7s ease-in-out infinite}
+.person.negar .arm.l{left:1px;transform:rotate(20deg)}.person.negar .arm.r{right:1px;transform:rotate(-20deg)}
+.person.asentir .head{animation:yes 1.1s ease-in-out infinite}
+.person.coordinar .arm.r{animation:wave 1.3s ease-in-out infinite}
+.person.walk{animation:walkbob .4s ease-in-out infinite}
+@keyframes type{from{transform:rotate(-12deg)}to{transform:rotate(10deg)}}
+@keyframes point{from{transform:rotate(-8deg)}to{transform:rotate(-30deg)}}
+@keyframes lupa{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(-28deg) translateY(-1px)}}
+@keyframes pass{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg) translateX(-2px)}}
+@keyframes stamp{0%,65%{transform:rotate(-8deg)}72%{transform:rotate(30deg) translateY(3px)}100%{transform:rotate(-8deg)}}
+@keyframes no{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+@keyframes yes{0%,100%{transform:translateY(0)}50%{transform:translateY(2px)}}
+@keyframes wave{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(-60deg)}}
+@keyframes walkbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+
+.paper-prop{position:absolute;width:8px;height:10px;background:#f5f0e0;border:1px solid #bbb;z-index:6;pointer-events:none;opacity:0}
+.paper-prop.fly{opacity:1;animation:pfly 2.2s ease-in-out forwards}
+@keyframes pfly{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(40px,-20px) rotate(25deg);opacity:0}}
+
+.ficha{
+  display:none;position:absolute;z-index:20;left:50%;top:55%;transform:translate(-50%,-50%);
+  width:min(320px,92%);background:#12151e;border:3px solid var(--gold);padding:.65rem;
+  box-shadow:0 0 0 4px #1a1008,0 16px 36px rgba(0,0,0,.65);
+}
+.ficha.open{display:block}
+.ficha h3{margin:0 0 .35rem;color:var(--gold2);font-size:.85rem}
+.ficha .out{background:#0a0c12;border:1px solid #3a3028;padding:.45rem;font-size:.68rem;margin:.35rem 0;max-height:110px;overflow:auto}
+.ficha ul{font-size:.65rem;color:#b0a090;margin:.25rem 0;padding-left:1rem}
+.ficha button{margin-top:.35rem;background:var(--gold);border:0;padding:.3rem .65rem;font-family:inherit;font-weight:700;cursor:pointer}
+.side{background:var(--panel);border:3px solid #2a2430;padding:.5rem;display:flex;flex-direction:column;gap:.5rem;max-height:560px;overflow:auto}
+.side h3{margin:0;font-size:.68rem;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid #2a2430;padding-bottom:.2rem}
+.acct{display:grid;grid-template-columns:1fr 1fr;gap:.25rem;font-size:.65rem}
+.acct .k{color:var(--muted)}.acct .v{color:var(--ink);font-weight:700}
+.acct .v.big{grid-column:span 2;font-size:.9rem;color:var(--gold2)}
+.team-row{display:flex;justify-content:space-between;align-items:center;font-size:.6rem;padding:.15rem 0;border-bottom:1px solid #1a1820;cursor:pointer}
+.team-row:hover{background:#1a1520}
+.team-row .st{color:var(--accent);max-width:55%;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.squawk{font-size:.58rem;max-height:200px;overflow:auto;background:#0a0c12;border:1px solid #2a2430;padding:.3rem}
+.squawk .line{padding:.15rem 0;border-bottom:1px solid #16141c}
+.squawk .t{color:var(--muted);margin-right:.25rem}
+.mini-chart{height:50px;background:#0a0c12;border:1px solid #2a2430;padding:3px}
+.mini-chart svg{width:100%;height:100%}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:15}
+.overlay.open{display:block}
+
+/* STATS / OPS */
+.grid-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.55rem;margin-bottom:.75rem}
+.stat{background:var(--card);border:2px solid #2a2430;padding:.55rem}
+.stat .lbl{font-size:.6rem;color:var(--muted);text-transform:uppercase}
+.stat .val{font-size:1.05rem;font-weight:700;color:var(--gold2);margin-top:.15rem}
+.stat .val.sin{color:var(--muted);font-size:.85rem}
+.panel{background:var(--panel);border:2px solid #2a2430;padding:.75rem;margin-bottom:.75rem}
+.panel h2{margin:0 0 .55rem;font-size:.9rem;color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+th,td{padding:.35rem .4rem;border-bottom:1px solid #2a2430;text-align:left}
+th{color:var(--muted);font-size:.65rem;text-transform:uppercase}
+tr.op-row{cursor:pointer}tr.op-row:hover,tr.op-row.selected{background:#1a1520}
+.detail{display:none;background:var(--card);border:2px solid #3a3028;padding:.75rem;margin-top:.55rem}
+.detail.open{display:block}
+.detail .cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.4rem}
+.detail .k{color:var(--muted);font-size:.65rem}.detail .v{font-weight:700;font-size:.8rem}
+
+/* SALA */
+.sala{
+  background:
+    linear-gradient(180deg,#12151e,#0a0c12);
+  border:3px solid #3a2e24;min-height:520px;padding:1rem;position:relative;
+}
+.sala .skyline{height:60px}
+.mesa-reunion{
+  margin:2.5rem auto 1rem;width:min(880px,94%);height:120px;
+  background:radial-gradient(ellipse at center,var(--wood2),var(--wood));
+  border:4px solid var(--gold);border-radius:50%;position:relative;
+  box-shadow:0 10px 0 #1a1008;
+}
+.proyector{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:58%;max-width:300px;background:#050608;border:3px solid #333;color:var(--accent);
+  font-size:.68rem;padding:.45rem;text-align:center;min-height:48px;
+}
+.asistentes{display:flex;flex-wrap:wrap;justify-content:center;gap:.85rem;margin-top:.75rem}
+.asistente{text-align:center;width:90px}
+.asistente .habla{background:#fff8e8;color:#1a1008;border:2px solid #c9a880;font-size:.55rem;padding:.25rem;min-height:38px;margin-bottom:.25rem;line-height:1.2}
+.asistente .nombre{font-size:.6rem;color:var(--muted)}
+.paso-btn{background:var(--gold);color:#1a1008;border:0;padding:.45rem .9rem;font-family:inherit;font-weight:800;cursor:pointer;margin:.3rem}
+.paso-btn.sec{background:#1a1520;color:var(--ink);border:2px solid #3a3028}
+
+footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:15}
+.overlay.open{display:block}
+</style>
+</head>
+<body>
+<div class="banner" id="aviso">MODO SIMULACIÓN — nada garantiza beneficios</div>
+<header>
+  <div>
+    <h1>Mesa de Trading</h1>
+    <div class="meta" id="meta">…</div>
+  </div>
+  <nav id="nav">
+    <button data-tab="oficina" class="active">Oficina</button>
+    <button data-tab="stats">Estadísticas</button>
+    <button data-tab="ops">Operaciones</button>
+    <button data-tab="sala">Sala de reuniones</button>
+  </nav>
+</header>
+<main>
+<section class="tab active" id="tab-oficina">
+  <div class="floor-wrap">
+    <div class="floor" id="floor">
+      <div class="skyline" id="skyline"></div>
+      <div class="clock" id="clock">UTC</div>
+      <div class="wall-monitors" id="wall-mons"></div>
+      <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
+      <div class="plan" id="plan">
+        <div class="aisle"></div>
+        <div class="decor plant" style="left:6px;top:8px">🪴</div>
+        <div class="decor plant" style="right:8px;top:10px">🪴</div>
+        <div class="decor plant" style="left:10px;bottom:12px">🪴</div>
+        <div class="decor coffee" id="cafe" style="right:10px;bottom:18px">☕ CAFÉ</div>
+        <div class="decor meet" style="left:50%;bottom:8px;transform:translateX(-50%)">REUNIÓN</div>
+        <div class="decor bull" style="left:8px;top:45%">🐂<br/>SIM 250€</div>
+        <div class="desks" id="desks"></div>
+        <div class="paper-prop" id="paper-fly"></div>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <div class="ficha" id="ficha"></div>
+    </div>
+    <aside class="side">
+      <h3>Cuenta (sim)</h3>
+      <div class="acct" id="acct"></div>
+      <h3>Equipo</h3>
+      <div id="team"></div>
+      <h3>Squawk</h3>
+      <div class="squawk" id="squawk"></div>
+      <h3>Equity</h3>
+      <div class="mini-chart" id="mini-eq"></div>
+    </aside>
+  </div>
+</section>
+
+<section class="tab" id="tab-stats">
+  <div class="grid-stats" id="stats-grid"></div>
+  <div class="panel"><h2>Curva de capital</h2><div id="curva"></div></div>
+  <div class="panel"><h2>PnL por mercado</h2><div id="pnl-mercado" class="sin">sin datos</div></div>
+  <div class="panel"><h2>Capital invertido</h2><div id="capital-inv"></div></div>
+</section>
+
+<section class="tab" id="tab-ops">
+  <div class="panel">
+    <h2>Diario de operaciones</h2>
+    <div style="overflow:auto">
+      <table><thead><tr>
+        <th>ID</th><th>Fecha</th><th>Activo</th><th>Mercado</th><th>Dir</th><th>Estado</th><th>PnL €</th><th>R</th>
+      </tr></thead><tbody id="ops-body"></tbody></table>
+    </div>
+    <div class="detail" id="op-detail"></div>
+  </div>
+</section>
+
+<section class="tab" id="tab-sala">
+  <div class="sala">
+    <div class="skyline" style="position:relative;height:50px" id="sala-sky"></div>
+    <h2 style="margin:.5rem 0;color:var(--gold);font-size:.95rem">Sala de reuniones — informe a Daniel</h2>
+    <p class="meta" id="sala-meta" style="color:var(--muted);font-size:.75rem"></p>
+    <div class="mesa-reunion"><div class="proyector" id="proyector">Pulsa «Siguiente»</div></div>
+    <div class="asistentes" id="asistentes"></div>
+    <div style="text-align:center">
+      <button class="paso-btn sec" id="btn-prev">Anterior</button>
+      <button class="paso-btn" id="btn-next">Siguiente</button>
+      <span id="paso-lbl" style="color:var(--muted);font-size:.75rem;margin-left:.4rem"></span>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Simulación personal · regenerar: python3 build_web.py · Nunca inventa datos</footer>
+<script>
+(function(){
+  const SIN='sin datos';
+  const D=window.MESA_DATA||null;
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const v=x=>(x===null||x===undefined||x===''||(Array.isArray(x)&&!x.length))?SIN:x;
+  function money(n,mon){
+    if(n===SIN||n===null||n===undefined||n==='')return SIN;
+    const num=Number(n); if(Number.isNaN(num))return String(n);
+    return num.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' '+(mon||'EUR');
+  }
+  const PAL={
+    macro:{skin:'#e8b890',hair:'#2a1a10',shirt:'#3d6ea5',pants:'#1a2030'},
+    sentimiento:{skin:'#e0b080',hair:'#5a3a20',shirt:'#7a3a9a',pants:'#1a2030'},
+    trader:{skin:'#d4a574',hair:'#111',shirt:'#2a8a5a',pants:'#152028'},
+    cro:{skin:'#e8b890',hair:'#4a3030',shirt:'#a03a3a',pants:'#201820'},
+    ejecucion:{skin:'#e0b898',hair:'#3a2a1a',shirt:'#3a7a9a',pants:'#1a2430'},
+    auditor:{skin:'#f0c8a8',hair:'#6a5040',shirt:'#5a6a7a',pants:'#1a2030'},
+    esceptico:{skin:'#e0b898',hair:'#111',shirt:'#4a4a5a',pants:'#1a1a22'},
+    coo:{skin:'#e8b890',hair:'#2a2018',shirt:'#c9a227',pants:'#1a2030'},
+  };
+
+  document.getElementById('nav').onclick=e=>{
+    const b=e.target.closest('button[data-tab]'); if(!b)return;
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); document.getElementById('tab-'+b.dataset.tab).classList.add('active');
+  };
+
+  // skyline windows
+  const sky=document.getElementById('skyline');
+  for(let i=0;i<28;i++){
+    const w=document.createElement('div'); w.className='win';
+    w.style.left=(8+i*28+(i%3)*6)+'px';
+    w.style.bottom=(8+(i%4)*10)+'px';
+    w.style.animationDelay=(i*0.2)+'s';
+    w.style.background=['#3a4a2a','#2a3a5a','#5a3a2a','#3a3a4a'][i%4];
+    sky.appendChild(w);
+  }
+  document.getElementById('sala-sky').innerHTML=sky.innerHTML;
+
+  if(!D){
+    document.getElementById('meta').textContent='sin datos — ejecuta build_web.py';
+    return;
+  }
+
+  document.getElementById('aviso').textContent=D.aviso||'MODO SIMULACIÓN — nada garantiza beneficios';
+  document.getElementById('meta').textContent=(D.proyecto||'')+' · '+ (D.generado_utc||SIN)+' · '+(D.informe&&D.informe.archivo||SIN);
+
+  const precios=D.precios||{};
+  const S=D.stats||{};
+  const mon=S.moneda||'EUR';
+  const cuenta=D.cuenta||{};
+
+  // ticker
+  function fmtPx(p){
+    if(!p||p.precio===SIN||p.precio==null) return null;
+    const ch=p.cambio_pct;
+    const cls=(typeof ch==='number'?(ch>=0?'up':'dn'):'');
+    const chs=ch===SIN?'':((ch>0?'+':'')+ch+'%');
+    return {html:null, text:null, cls, chs, precio:p.precio, hora:p.hora};
+  }
+  const order=['BTC','ETH','SOL','SPY','QQQ','NVDA','EURUSD','VIX'];
+  let tickParts=[];
+  order.forEach(k=>{
+    const p=precios[k]; if(!p||p.precio===SIN||p.precio==null){ tickParts.push(`<span class="sep">${k}: sin datos</span>`); return; }
+    const cls=typeof p.cambio_pct==='number'?(p.cambio_pct>=0?'up':'dn'):'';
+    const chs=typeof p.cambio_pct==='number'?((p.cambio_pct>0?'+':'')+p.cambio_pct+'%'):'';
+    tickParts.push(`<span class="${cls}">${k} ${p.precio} ${chs}</span><span class="sep">· ${p.hora||''} ·</span>`);
+  });
+  const tickHtml=tickParts.join(' ')+' '+tickParts.join(' ');
+  document.getElementById('ticker').innerHTML=tickHtml.length?tickHtml:'<span class="sin">sin datos</span>';
+
+  // wall monitors
+  const wm=document.getElementById('wall-mons');
+  const risk=(precios.VIX&&precios.VIX.precio!==SIN)?(`VIX ${precios.VIX.precio}`):'sin datos';
+  const bias=(D.informe&&D.informe.sesgo_macro!==SIN)?String(D.informe.sesgo_macro).slice(0,40):'sin datos';
+  wm.innerHTML=`
+    <div class="wall-mon"><div class="title">RISK</div>${esc(risk)}<br/>${esc(bias)}</div>
+    <div class="wall-mon"><div class="title">TAPE</div>${['BTC','ETH','NVDA'].map(k=>{const p=precios[k];return p&&p.precio!==SIN?`${k} ${p.precio}`:`${k} sin datos`;}).map(esc).join('<br/>')}</div>
+    <div class="wall-mon"><div class="title">SIM</div>Equity ${esc(money(cuenta.equity,mon))}<br/>PnL ${esc(money(cuenta.pnl_realizado,mon))}</div>`;
+
+  // desks (compact trading floor)
+  const desks=document.getElementById('desks');
+  const ficha=document.getElementById('ficha');
+  const overlay=document.getElementById('overlay');
+  const deskEls={};
+  function personHTML(role,accion,extraClass){
+    const pal=PAL[role.id]||PAL.macro;
+    return `<div class="person ${esc(accion)} ${extraClass||''}" data-role="${esc(role.id)}" style="--skin:${pal.skin};--hair:${pal.hair};--shirt:${pal.shirt};--pants:${pal.pants}">
+      <div class="head"><div class="hair"></div><div class="eye l"></div><div class="eye r"></div></div>
+      <div class="body"><div class="arm l"></div><div class="arm r"></div></div>
+      <div class="legs"><div class="leg"></div><div class="leg"></div></div>
+    </div>`;
+  }
+  function openFicha(role){
+    ficha.classList.add('open'); overlay.classList.add('open');
+    const funcs=(role.funciones||[]).map(f=>'<li>'+esc(f)+'</li>').join('');
+    ficha.innerHTML=`<h3>${esc(role.titulo||role.nombre)}</h3>
+      <div style="font-size:.6rem;color:var(--muted)">Tag: ${esc(role.tag||SIN)}</div>
+      <ul>${funcs||'<li class="sin">sin datos</li>'}</ul>
+      <div class="out"><strong>Último output</strong><br/>${esc(role.bocadillo||SIN)}</div>
+      <button type="button" id="ficha-close">Cerrar</button>`;
+    document.getElementById('ficha-close').onclick=closeFicha;
+  }
+  function closeFicha(){ ficha.classList.remove('open'); overlay.classList.remove('open'); document.querySelectorAll('.desk').forEach(d=>d.classList.remove('focus')); }
+  overlay.onclick=closeFicha;
+
+  const shortName=r=>{
+    const m={macro:'MACRO',sentimiento:'SENT',trader:'QUANT',cro:'CRO',ejecucion:'EXEC',auditor:'AUDIT',esceptico:'ESCÉP',coo:'COO'};
+    return m[r.id]||(r.nombre||r.id||'?').slice(0,8).toUpperCase();
+  };
+
+  (D.roles||[]).forEach(role=>{
+    const el=document.createElement('div');
+    el.className='desk'+(role.id==='coo'?' coo':'');
+    el.dataset.role=role.id;
+    const tag=role.tag||SIN;
+    const tagCls=(tag==='NO'||/^NO\b/.test(tag))?'no':(/OK|CONV|SÍ/.test(tag)?'ok':'');
+    const accion=role.accion||'teclear';
+    const nMon=role.id==='coo'?3:(role.id==='trader'||role.id==='cro'?3:2);
+    let mons='';
+    for(let i=0;i<nMon;i++) mons+=`<div class="mon"><div class="scr"><div class="cl" style="animation-delay:${i*.3}s"></div></div></div>`;
+    el.innerHTML=`
+      <div class="tag-float ${tagCls}">${esc(String(tag).slice(0,18))}</div>
+      <div class="plate" title="${esc(role.titulo||role.nombre)}">${esc(shortName(role))}</div>
+      <div class="station">
+        <div class="monitors">${mons}</div>
+        <div class="desk-top"></div>
+        <div class="kbd"></div>
+        <div class="desk-leg l"></div><div class="desk-leg r"></div>
+        <div class="chair"></div>
+        ${personHTML(role,accion)}
+      </div>`;
+    el.onclick=()=>{ document.querySelectorAll('.desk').forEach(d=>d.classList.remove('focus')); el.classList.add('focus'); openFicha(role); };
+    el.onmouseenter=()=>{ if(!ficha.classList.contains('open')){ /* soft preview via title already */ } };
+    desks.appendChild(el);
+    deskEls[role.id]=el;
+  });
+
+  // ambient movement: walk to cafe / CRO / back
+  (function ambient(){
+    const rolesWalk=['ejecucion','auditor','esceptico','sentimiento','macro','trader'];
+    let i=0;
+    function go(){
+      const id=rolesWalk[i%rolesWalk.length]; i++;
+      const desk=deskEls[id]; if(!desk) return;
+      const person=desk.querySelector('.person'); if(!person) return;
+      const cafe=document.getElementById('cafe');
+      const cro=deskEls['cro'];
+      const plan=document.getElementById('plan');
+      const dest = (i%3===0 && cafe) ? cafe : (i%3===1 && cro ? cro : null);
+      if(!dest||!plan){ person.classList.add('teclear'); return; }
+      const pr=plan.getBoundingClientRect();
+      const dr=dest.getBoundingClientRect();
+      const sr=desk.querySelector('.station').getBoundingClientRect();
+      // clone walker on plan absolute
+      const walker=person.cloneNode(true);
+      walker.classList.add('walk');
+      walker.style.position='absolute';
+      walker.style.left=(sr.left-pr.left+sr.width/2-10)+'px';
+      walker.style.bottom=(pr.bottom-sr.bottom)+'px';
+      walker.style.zIndex='8';
+      person.style.opacity='0';
+      plan.appendChild(walker);
+      requestAnimationFrame(()=>{
+        walker.style.left=(dr.left-pr.left+dr.width/2-10)+'px';
+        walker.style.bottom=(pr.bottom-dr.bottom+8)+'px';
+      });
+      // paper to CRO
+      if(dest===cro){
+        const paper=document.getElementById('paper-fly');
+        if(paper){
+          paper.style.left=walker.style.left; paper.style.bottom=walker.style.bottom;
+          paper.classList.remove('fly'); void paper.offsetWidth; paper.classList.add('fly');
+        }
+      }
+      setTimeout(()=>{
+        walker.remove();
+        person.style.opacity='1';
+      }, 2200);
+    }
+    setTimeout(go, 1800);
+    setInterval(go, 7000);
+  })();
+
+  // sidebar account — ONLY real stats
+  document.getElementById('acct').innerHTML=`
+    <div class="k">Equity</div><div class="v big">${esc(money(cuenta.equity,mon))}</div>
+    <div class="k">Capital inicial</div><div class="v">${esc(money(cuenta.capital_inicial,mon))}</div>
+    <div class="k">PnL realizado</div><div class="v">${esc(money(cuenta.pnl_realizado,mon))}</div>
+    <div class="k">Riesgo abierto</div><div class="v">${esc(money(cuenta.riesgo_abierto_eur,mon))}</div>
+    <div class="k">Abiertas / Pend.</div><div class="v">${esc(v(cuenta.abiertas))} / ${esc(v(cuenta.pendientes))}</div>`;
+
+  const team=document.getElementById('team');
+  (D.roles||[]).forEach(role=>{
+    const row=document.createElement('div'); row.className='team-row';
+    row.innerHTML=`<span>${esc(role.nombre)}</span><span class="st">${esc(role.tag||role.bocadillo||SIN)}</span>`;
+    row.onclick=()=>openFicha(role);
+    team.appendChild(row);
+  });
+
+  const sq=document.getElementById('squawk');
+  (D.squawk||[]).forEach(line=>{
+    const d=document.createElement('div'); d.className='line';
+    d.innerHTML=`<span class="t">${esc(line.hora||'')}</span>${esc(line.msg||SIN)}`;
+    sq.appendChild(d);
+  });
+  if(!(D.squawk||[]).length) sq.innerHTML='<div class="sin">sin datos</div>';
+
+  // mini equity curve
+  const curva=S.curva_capital||[];
+  const me=document.getElementById('mini-eq');
+  if(curva.length){
+    const vals=curva.map(p=>Number(p.equity)||0);
+    const min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1;
+    const w=260,h=48,pad=4;
+    const pts=curva.map((p,i)=>{
+      const x=pad+(i/Math.max(curva.length-1,1))*(w-2*pad);
+      const y=h-pad-((Number(p.equity)-min)/span)*(h-2*pad);
+      return x+','+y;
+    }).join(' ');
+    me.innerHTML=`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline fill="none" stroke="#5bdbb0" stroke-width="2" points="${pts}"/></svg>`;
+  } else me.innerHTML='<span class="sin">sin datos</span>';
+
+  // STATS tab
+  const cards=[
+    ['Equity', money(S.equity,mon)],['Capital invertido', money(S.capital_invertido,mon)],
+    ['Capital inicial', money(S.capital_inicial,mon)],['Aportaciones', money(S.aportaciones,mon)],
+    ['Ganancias netas', money(S.ganancias_netas,mon)],['PnL realizado', money(S.pnl_realizado,mon)],
+    ['Win rate', S.win_rate_pct===SIN?SIN:(S.win_rate_pct+'%')],['Profit factor', v(S.profit_factor)],
+    ['Max drawdown', S.max_drawdown_pct===SIN?SIN:(S.max_drawdown_pct+'%')],['R medio', v(S.r_medio)],
+    ['Operaciones', v(S.total_operaciones)],['Abiertas / Pend. / Cerradas', `${v(S.abiertas)} / ${v(S.pendientes)} / ${v(S.cerradas)}`],
+  ];
+  const sg=document.getElementById('stats-grid');
+  cards.forEach(([lbl,val])=>{
+    const d=document.createElement('div'); d.className='stat';
+    d.innerHTML=`<div class="lbl">${esc(lbl)}</div><div class="val${val===SIN?' sin':''}">${esc(String(val))}</div>`;
+    sg.appendChild(d);
+  });
+  const cv=document.getElementById('curva');
+  if(!curva.length) cv.innerHTML='<p class="sin">sin datos</p>';
+  else {
+    const vals=curva.map(p=>Number(p.equity)||0);
+    const min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1;
+    const w=600,h=160,pad=20;
+    const pts=curva.map((p,i)=>{
+      const x=pad+(i/Math.max(curva.length-1,1))*(w-2*pad);
+      const y=h-pad-((Number(p.equity)-min)/span)*(h-2*pad);
+      return `${x},${y}`;
+    }).join(' ');
+    cv.innerHTML=`<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:160px"><polyline fill="none" stroke="#5bdbb0" stroke-width="2.5" points="${pts}"/></svg>`;
+  }
+  const pm=S.pnl_por_mercado||{};
+  const pmk=Object.keys(pm);
+  document.getElementById('pnl-mercado').innerHTML=pmk.length
+    ? '<table><thead><tr><th>Mercado</th><th>PnL €</th></tr></thead><tbody>'+pmk.map(k=>`<tr><td>${esc(k)}</td><td>${esc(money(pm[k],mon))}</td></tr>`).join('')+'</tbody></table>'
+    : '<span class="sin">sin datos</span>';
+  const apDet=S.aportaciones_detalle||[];
+  document.getElementById('capital-inv').innerHTML=`
+    <p>Inicial: <strong>${esc(money(S.capital_inicial,mon))}</strong> · Aportaciones: <strong>${esc(money(S.aportaciones,mon))}</strong>
+    · Invertido: <strong>${esc(money(S.capital_invertido,mon))}</strong> · Equity: <strong>${esc(money(S.equity,mon))}</strong>
+    · Netas: <strong>${esc(money(S.ganancias_netas,mon))}</strong></p>
+    ${apDet.length?'<table><thead><tr><th>Fecha</th><th>Tipo</th><th>Importe</th></tr></thead><tbody>'+apDet.map(e=>`<tr><td>${esc(e.fecha)}</td><td>${esc(e.tipo)}</td><td>${esc(money(e.importe,mon))}</td></tr>`).join('')+'</tbody></table>':'<p class="sin">Sin aportaciones mensuales aún.</p>'}`;
+
+  // OPS
+  const tbody=document.getElementById('ops-body');
+  const detail=document.getElementById('op-detail');
+  const journal=D.journal||[];
+  if(!journal.length) tbody.innerHTML=`<tr><td colspan="8" class="sin">sin datos — diario vacío</td></tr>`;
+  else journal.forEach(r=>{
+    const tr=document.createElement('tr'); tr.className='op-row';
+    tr.innerHTML=`<td>${esc(r.id||SIN)}</td><td>${esc(r.fecha_apertura||SIN)}</td><td>${esc(r.activo||SIN)}</td>
+      <td>${esc(r.mercado||SIN)}</td><td>${esc(r.direccion||SIN)}</td>
+      <td><span class="badge ${esc(r.estado||'')}">${esc(r.estado||SIN)}</span></td>
+      <td>${esc(r.pnl_eur!==''&&r.pnl_eur!=null?r.pnl_eur:SIN)}</td>
+      <td>${esc(r.r_multiple!==''&&r.r_multiple!=null?r.r_multiple:SIN)}</td>`;
+    tr.onclick=()=>{
+      document.querySelectorAll('tr.op-row').forEach(x=>x.classList.remove('selected'));
+      tr.classList.add('selected');
+      const inf=D.informe||{};
+      detail.classList.add('open');
+      detail.innerHTML=`<h3 style="margin:0 0 .5rem;color:var(--gold)">${esc(r.id||SIN)} — ${esc(r.activo||'')} ${esc(r.direccion||'')}</h3>
+        <div class="cols">
+          <div><div class="k">Entrada</div><div class="v">${esc(v(r.entrada))}</div></div>
+          <div><div class="k">SL</div><div class="v">${esc(v(r.sl))}</div></div>
+          <div><div class="k">TP1/2/3</div><div class="v">${esc(v(r.tp1))} / ${esc(v(r.tp2))} / ${esc(v(r.tp3))}</div></div>
+          <div><div class="k">Tamaño</div><div class="v">${esc(v(r.tamano))}</div></div>
+          <div><div class="k">Riesgo €</div><div class="v">${esc(v(r.riesgo_eur))}</div></div>
+          <div><div class="k">Apalancamiento</div><div class="v">${esc(v(r.apalancamiento))}x</div></div>
+          <div><div class="k">Estado</div><div class="v">${esc(v(r.estado))}</div></div>
+          <div><div class="k">Cierre</div><div class="v">${esc(v(r.fecha_cierre))} @ ${esc(v(r.precio_cierre))}</div></div>
+          <div><div class="k">PnL / R</div><div class="v">${esc(v(r.pnl_eur))} / ${esc(v(r.r_multiple))}</div></div>
+          <div><div class="k">Escéptico (op)</div><div class="v">${esc(v(r.esceptico))}</div></div>
+          <div><div class="k">Notas</div><div class="v">${esc(v(r.notas))}</div></div>
+        </div>
+        <hr style="border-color:#2a2430;margin:.7rem 0"/>
+        <div class="cols">
+          <div><div class="k">Debate Escéptico</div><div class="v">${esc(v(inf.debate_esceptico))}</div></div>
+          <div><div class="k">Veredicto Escéptico</div><div class="v">${esc(v(inf.veredicto_esceptico))}</div></div>
+          <div><div class="k">CRO aprobados</div><div class="v">${esc((inf.aprobados&&inf.aprobados.length)?inf.aprobados.join(' · '):SIN)}</div></div>
+          <div><div class="k">CRO rechazados</div><div class="v">${esc((inf.rechazados&&inf.rechazados.length)?inf.rechazados.join(' · '):SIN)}</div></div>
+        </div>`;
+    };
+    tbody.appendChild(tr);
+  });
+
+  // SALA
+  const inf=D.informe||{};
+  document.getElementById('sala-meta').textContent='Informe: '+v(inf.archivo)+' · '+v(inf.fecha);
+  const slides=[
+    {quien:'coo', titulo:'COO', texto:v(inf.resumen_coo)!==SIN?inf.resumen_coo:('Equity '+money(S.equity,mon)+' · simulación')},
+    {quien:'macro', titulo:'Macro', texto:'Sesgo: '+v(inf.sesgo_macro)},
+    {quien:'sentimiento', titulo:'Sentimiento', texto:'F&G: '+v(inf.sentimiento_score)+(inf.sentimiento_label&&inf.sentimiento_label!==SIN?' ('+inf.sentimiento_label+')':'')},
+    {quien:'trader', titulo:'Trader', texto:(inf.setups&&inf.setups.length)?inf.setups.slice(0,3).join(' | '):SIN},
+    {quien:'esceptico', titulo:'Escéptico', texto:(v(inf.debate_esceptico)!==SIN?String(inf.debate_esceptico).slice(0,160):'NO por defecto')+' · '+v(inf.veredicto_esceptico)},
+    {quien:'cro', titulo:'CRO', texto:'OK: '+((inf.aprobados&&inf.aprobados.length)?inf.aprobados.join('; '):'0')+' · NO: '+((inf.rechazados&&inf.rechazados.length)?inf.rechazados.join('; '):'0')},
+    {quien:'ejecucion', titulo:'Ejecución', texto:'Abiertas '+v(S.abiertas)+' · Pend '+v(S.pendientes)+' · Cerr '+v(S.cerradas)},
+    {quien:'auditor', titulo:'Auditor', texto:'WR '+v(S.win_rate_pct)+' · PF '+v(S.profit_factor)+' · MDD '+v(S.max_drawdown_pct)+' · R '+v(S.r_medio)},
+    {quien:'coo', titulo:'COO cierre', texto:D.aviso||'MODO SIMULACIÓN — nada garantiza beneficios'},
+  ];
+  let paso=0;
+  const proy=document.getElementById('proyector');
+  const asist=document.getElementById('asistentes');
+  function renderSala(){
+    const s=slides[paso];
+    proy.textContent=s.titulo+': '+s.texto;
+    document.getElementById('paso-lbl').textContent=(paso+1)+' / '+slides.length;
+    asist.innerHTML='';
+    (D.roles||[]).forEach(role=>{
+      const speaking=role.id===s.quien;
+      const div=document.createElement('div'); div.className='asistente';
+      div.innerHTML=`${speaking?`<div class="habla">${esc(String(s.texto).slice(0,120))}</div>`:`<div class="habla" style="visibility:hidden">.</div>`}
+        ${personHTML(role, speaking?(role.accion||'coordinar'):'')}
+        <div class="nombre">${esc(role.nombre)}</div>`;
+      asist.appendChild(div);
+    });
+  }
+  document.getElementById('btn-next').onclick=()=>{paso=(paso+1)%slides.length;renderSala();};
+  document.getElementById('btn-prev').onclick=()=>{paso=(paso-1+slides.length)%slides.length;renderSala();};
+  renderSala();
+})();
+</script>
+</body>
+</html>
