@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-17 23:50 UTC",
+  "generado_utc": "2026-10-17 23:58 UTC",
   "aviso": "MODO SIMULACIÓN — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -149,7 +149,7 @@ window.MESA_DATA = {
       ],
       "accion": "graficos",
       "bocadillo": "Setups: 4 · S1 ETH short (limit)",
-      "tag": "BTC 81396.01"
+      "tag": "BTC 81491.03"
     },
     {
       "id": "cro",
@@ -225,22 +225,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 81396.01,
-      "cambio_pct": -0.28,
+      "precio": 81491.03,
+      "cambio_pct": -0.15,
       "fuente": "Binance",
-      "hora": "2026-10-17 23:50 UTC"
+      "hora": "2026-10-17 23:58 UTC"
     },
     "ETH": {
-      "precio": 2398.26,
-      "cambio_pct": -1.05,
+      "precio": 2403.24,
+      "cambio_pct": -0.82,
       "fuente": "Binance",
-      "hora": "2026-10-17 23:50 UTC"
+      "hora": "2026-10-17 23:58 UTC"
     },
     "SOL": {
-      "precio": 103.22,
-      "cambio_pct": -1.13,
+      "precio": 103.46,
+      "cambio_pct": -0.96,
       "fuente": "Binance",
-      "hora": "2026-10-17 23:50 UTC"
+      "hora": "2026-10-17 23:58 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -331,12 +331,12 @@ window.MESA_DATA = {
       "msg": "AUDITOR · equity 250.0 EUR · abiertas 0"
     },
     {
-      "hora": "2026-10-17 23:50 UTC",
-      "msg": "TAPE · BTC 81396.01 (-0.28%) · 2026-10-17 23:50 UTC"
+      "hora": "2026-10-17 23:58 UTC",
+      "msg": "TAPE · BTC 81491.03 (-0.15%) · 2026-10-17 23:58 UTC"
     },
     {
-      "hora": "2026-10-17 23:50 UTC",
-      "msg": "TAPE · ETH 2398.26 (-1.05%) · 2026-10-17 23:50 UTC"
+      "hora": "2026-10-17 23:58 UTC",
+      "msg": "TAPE · ETH 2403.24 (-0.82%) · 2026-10-17 23:58 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -346,7 +346,7 @@ window.MESA_DATA = {
   "tags": {
     "sentimiento": "FEAR&GREED 55 Greed",
     "macro": "RISK-OFF moderado / bajista…",
-    "trader": "BTC 81396.01",
+    "trader": "BTC 81491.03",
     "cro": "OK 1 · NO 3",
     "esceptico": "SÍ/NO",
     "ejecucion": "PEND 1",
@@ -362,6 +362,67 @@ window.MESA_DATA = {
     "moneda": "EUR",
     "abiertas": 0,
     "pendientes": 1
+  },
+  "configuracion": {
+    "capital_inicial": 250.0,
+    "moneda": "EUR",
+    "perfil_activo": "Moderado",
+    "rb_minimo": 2.5,
+    "riesgo_base_pct": 1.0,
+    "apalancamiento_max": 3,
+    "alta_conviccion": {
+      "riesgo_max_pct": 2.0,
+      "apalancamiento_max": 10,
+      "requisitos": [
+        "esceptico convencido",
+        "R/B >= 1:3 en TP2",
+        "a favor de la tendencia 4h"
+      ],
+      "aprobado_por": "Daniel 2026-10-17"
+    },
+    "win_rate_pct": "sin datos",
+    "operaciones_cerradas": 0,
+    "perfiles": {
+      "Conservador": {
+        "riesgo_pct": 0.5,
+        "apalancamiento_max": 2,
+        "alta_conviccion": null
+      },
+      "Moderado": {
+        "riesgo_pct": 1.0,
+        "apalancamiento_max": 3,
+        "alta_conviccion": {
+          "riesgo_pct": 2.0,
+          "apalancamiento_max": 10
+        }
+      },
+      "Agresivo": {
+        "riesgo_pct": 5.0,
+        "apalancamiento_max": 20,
+        "alta_conviccion": null
+      },
+      "Extremo": {
+        "riesgo_pct": 10.0,
+        "apalancamiento_max": 50,
+        "alta_conviccion": null
+      },
+      "Scalping": {
+        "riesgo_pct": 0.25,
+        "apalancamiento_max": 5,
+        "alta_conviccion": null,
+        "rb_sugerido": 1.5,
+        "ops_dia": 20,
+        "nota": "Muchas operaciones pequeñas"
+      }
+    },
+    "comision_ida_vuelta_pct_default": 0.1,
+    "orden_perfiles": [
+      "Conservador",
+      "Moderado",
+      "Agresivo",
+      "Extremo",
+      "Scalping"
+    ]
   }
 };
 
@@ -589,6 +650,33 @@ tr.op-row{cursor:pointer}tr.op-row:hover,tr.op-row.selected{background:#1a1520}
 footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:15}
 .overlay.open{display:block}
+
+/* CONFIG */
+.cfg-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(max-width:800px){.cfg-grid{grid-template-columns:1fr}}
+.cfg-card{background:var(--panel);border:2px solid #2a2430;padding:.75rem}
+.cfg-card h2{margin:0 0 .55rem;font-size:.85rem;color:var(--gold)}
+.cfg-card label{display:block;font-size:.65rem;color:var(--muted);margin:.35rem 0 .15rem;text-transform:uppercase}
+.cfg-card input,.cfg-card select{width:100%;background:#0a0c12;color:var(--ink);border:2px solid #3a3028;padding:.4rem;font-family:inherit;font-size:.85rem}
+.cfg-card input:focus,.cfg-card select:focus{border-color:var(--gold);outline:0}
+.perfil-btns{display:flex;flex-wrap:wrap;gap:.35rem;margin:.35rem 0}
+.perfil-btns button{background:#1a1520;color:var(--ink);border:2px solid #3a3028;padding:.35rem .55rem;font-family:inherit;font-size:.72rem;font-weight:700;cursor:pointer}
+.perfil-btns button.active{background:var(--gold);color:#1a1008;border-color:var(--gold2)}
+.cfg-out{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.4rem;margin-top:.5rem}
+.cfg-out .stat .val{font-size:.95rem}
+.supuesto{background:#3a2a10;border:2px solid var(--warn);color:#ffe08a;padding:.4rem .55rem;font-size:.7rem;margin:.4rem 0;font-weight:700}
+.mc-bar{height:16px;background:#1a1520;border:2px solid #3a3028;margin:.4rem 0;position:relative;overflow:hidden}
+.mc-bar .ok{position:absolute;left:0;top:0;bottom:0;background:var(--ok)}
+.mc-bar .bad{position:absolute;right:0;top:0;bottom:0;background:var(--bad)}
+.cfg-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+.cfg-actions button{background:var(--gold);color:#1a1008;border:0;padding:.5rem .9rem;font-family:inherit;font-weight:800;cursor:pointer}
+.cfg-actions button.sec{background:#1a1520;color:var(--ink);border:2px solid #3a3028}
+#cfg-copy-status{font-size:.7rem;color:var(--ok);margin-left:.4rem}
+
+
+.cfg-slider{width:100%;accent-color:var(--gold);margin:.35rem 0}
+.cfg-slider-labels{display:flex;justify-content:space-between;font-size:.55rem;color:var(--muted);margin-bottom:.35rem}
+.cfg-slider-labels span.active{color:var(--gold2);font-weight:800}
 </style>
 </head>
 <body>
@@ -603,6 +691,7 @@ footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
     <button data-tab="stats">Estadísticas</button>
     <button data-tab="ops">Operaciones</button>
     <button data-tab="sala">Sala de reuniones</button>
+    <button data-tab="config">Configuración</button>
   </nav>
 </header>
 <main>
@@ -673,6 +762,60 @@ footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
     </div>
   </div>
 </section>
+
+<section class="tab" id="tab-config">
+  <div class="banner" style="margin-bottom:.75rem;border:2px solid var(--warn)">MODO SIMULACIÓN — nada garantiza beneficios. Esta pestaña es local: no guarda en el servidor.</div>
+  <div class="cfg-grid">
+    <div class="cfg-card">
+      <h2>Parámetros</h2>
+      <label>Capital (€)</label>
+      <input type="number" id="cfg-capital" min="1" step="1" />
+      <label>Objetivo — modo</label>
+      <select id="cfg-obj-mode">
+        <option value="mult">Multiplicador (×)</option>
+        <option value="importe">Importe objetivo (€)</option>
+      </select>
+      <label id="cfg-obj-label">Multiplicador objetivo</label>
+      <input type="number" id="cfg-objetivo" min="0.1" step="0.1" value="10" />
+      <label>Perfil de riesgo (Conservador → Máximo + Scalping)</label>
+      <input type="range" class="cfg-slider" id="cfg-slider" min="0" max="4" step="1" value="1" />
+      <div class="cfg-slider-labels" id="cfg-slider-labels">
+        <span data-i="0">Cons.</span><span data-i="1">Mod.</span><span data-i="2">Agr.</span><span data-i="3">Ext.</span><span data-i="4">Scalp</span>
+      </div>
+      <div class="perfil-btns" id="cfg-perfiles">
+        <button type="button" data-p="Conservador">Conservador</button>
+        <button type="button" data-p="Moderado">Moderado</button>
+        <button type="button" data-p="Agresivo">Agresivo</button>
+        <button type="button" data-p="Extremo">Extremo</button>
+        <button type="button" data-p="Scalping">Scalping</button>
+      </div>
+      <div id="cfg-perfil-desc" style="font-size:.7rem;color:var(--muted)"></div>
+      <label>R/B objetivo (a TP2)</label>
+      <input type="number" id="cfg-rb" min="0.5" step="0.1" />
+      <label>Win rate (%)</label>
+      <input type="number" id="cfg-wr" min="1" max="99" step="0.1" />
+      <div id="cfg-wr-note" class="supuesto" style="display:none"></div>
+      <label>Comisión+spread ida y vuelta (% del nocional / trade) — SUPUESTO editable</label>
+      <input type="number" id="cfg-comision" min="0" max="5" step="0.01" value="0.1" />
+      <div style="font-size:.62rem;color:var(--muted)">Por defecto 0,1 % round-trip cripto. En scalping reduce mucho el edge.</div>
+      <div class="cfg-actions">
+        <button type="button" id="cfg-recalc">Recalcular</button>
+        <button type="button" class="sec" id="cfg-copy">Copiar configuración</button>
+        <span id="cfg-copy-status"></span>
+      </div>
+    </div>
+    <div class="cfg-card">
+      <h2>Resultados (simulación local)</h2>
+      <div class="cfg-out" id="cfg-out"></div>
+      <h2 style="margin-top:1rem">Monte Carlo — 2.000 trayectorias</h2>
+      <p style="font-size:.68rem;color:var(--muted);margin:.2rem 0">Objetivo vs quemar cuenta (−80 % del capital). Nada garantiza beneficios.</p>
+      <div class="mc-bar"><div class="ok" id="mc-ok" style="width:0"></div><div class="bad" id="mc-bad" style="width:0"></div></div>
+      <div id="mc-txt" style="font-size:.75rem"></div>
+      <pre id="cfg-resumen" style="background:#0a0c12;border:1px solid #2a2430;padding:.5rem;font-size:.65rem;white-space:pre-wrap;margin-top:.6rem;max-height:180px;overflow:auto"></pre>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer>Simulación personal · regenerar: python3 build_web.py · Nunca inventa datos</footer>
 <script>
@@ -1016,6 +1159,217 @@ footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
   document.getElementById('btn-next').onclick=()=>{paso=(paso+1)%slides.length;renderSala();};
   document.getElementById('btn-prev').onclick=()=>{paso=(paso-1+slides.length)%slides.length;renderSala();};
   renderSala();
+
+  // ---- CONFIGURACIÓN ----
+  (function configTab(){
+    const C = (D && D.configuracion) || {};
+    const ORDEN = C.orden_perfiles || ['Conservador','Moderado','Agresivo','Extremo','Scalping'];
+    const perfiles = Object.assign({
+      Conservador:{riesgo_pct:0.5,apalancamiento_max:2,alta_conviccion:null},
+      Moderado:{riesgo_pct:1,apalancamiento_max:3,alta_conviccion:{riesgo_pct:2,apalancamiento_max:10}},
+      Agresivo:{riesgo_pct:5,apalancamiento_max:20,alta_conviccion:null},
+      Extremo:{riesgo_pct:10,apalancamiento_max:50,alta_conviccion:null},
+      Scalping:{riesgo_pct:0.25,apalancamiento_max:5,alta_conviccion:null,rb_sugerido:1.5,ops_dia:20,nota:'Muchas operaciones pequeñas'},
+    }, C.perfiles||{});
+    let perfil = C.perfil_activo || 'Moderado';
+    if(!perfiles[perfil]) perfil='Moderado';
+    const mon = C.moneda || 'EUR';
+    const cerradas = Number(C.operaciones_cerradas||0);
+    const wrReal = C.win_rate_pct;
+    const wrUsable = (cerradas>=10 && wrReal!==SIN && wrReal!=null && wrReal!=='' && !Number.isNaN(Number(wrReal)));
+
+    const elCap=document.getElementById('cfg-capital');
+    const elObj=document.getElementById('cfg-objetivo');
+    const elMode=document.getElementById('cfg-obj-mode');
+    const elRb=document.getElementById('cfg-rb');
+    const elWr=document.getElementById('cfg-wr');
+    const elWrNote=document.getElementById('cfg-wr-note');
+    const elDesc=document.getElementById('cfg-perfil-desc');
+    const elCom=document.getElementById('cfg-comision');
+    const elSlider=document.getElementById('cfg-slider');
+    if(!elCap) return;
+
+    elCap.value = C.capital_inicial!=null?C.capital_inicial:250;
+    elRb.value = C.rb_minimo!=null?C.rb_minimo:2.5;
+    elCom.value = C.comision_ida_vuelta_pct_default!=null?C.comision_ida_vuelta_pct_default:0.1;
+    if(wrUsable){
+      elWr.value = Number(wrReal);
+      elWrNote.style.display='none';
+    } else {
+      elWr.value = 40;
+      elWrNote.style.display='block';
+      elWrNote.textContent='SUPUESTO: win rate 40 % (menos de 10 operaciones cerradas en el journal). Editable.';
+    }
+
+    function syncSlider(name){
+      const idx=ORDEN.indexOf(name);
+      if(elSlider && idx>=0) elSlider.value=idx;
+      document.querySelectorAll('#cfg-slider-labels span').forEach(s=>{
+        s.classList.toggle('active', Number(s.dataset.i)===idx);
+      });
+    }
+
+    function setPerfil(name, fromSlider){
+      perfil=name;
+      document.querySelectorAll('#cfg-perfiles button').forEach(b=>b.classList.toggle('active', b.dataset.p===name));
+      syncSlider(name);
+      const p=perfiles[name];
+      let d='Riesgo '+p.riesgo_pct+'% · Apalancamiento ≤'+p.apalancamiento_max+'x';
+      if(p.alta_conviccion) d+=' · Alta convicción: '+p.alta_conviccion.riesgo_pct+'% / ≤'+p.alta_conviccion.apalancamiento_max+'x';
+      if(name==='Scalping'){
+        d+=' · R/B típico 1:'+(p.rb_sugerido||1.5)+' · ~'+(p.ops_dia||20)+' ops/día';
+        if(!fromSlider || Number(elRb.value)>=2) elRb.value = p.rb_sugerido||1.5;
+      }
+      elDesc.textContent=d+(p.nota?(' — '+p.nota):'');
+      calc();
+    }
+    document.getElementById('cfg-perfiles').onclick=e=>{
+      const b=e.target.closest('button[data-p]'); if(!b)return; setPerfil(b.dataset.p);
+    };
+    if(elSlider){
+      elSlider.oninput=()=>{
+        const name=ORDEN[Number(elSlider.value)]||'Moderado';
+        setPerfil(name, true);
+      };
+    }
+    elMode.onchange=()=>{
+      document.getElementById('cfg-obj-label').textContent = elMode.value==='mult'?'Multiplicador objetivo':'Importe objetivo (€)';
+      if(elMode.value==='mult') elObj.value=10; else elObj.value=1000;
+      calc();
+    };
+    ['cfg-capital','cfg-objetivo','cfg-rb','cfg-wr','cfg-comision'].forEach(id=>{
+      const el=document.getElementById(id); if(!el)return;
+      el.addEventListener('change', calc);
+      el.addEventListener('input', ()=>{ clearTimeout(window.__cfgT); window.__cfgT=setTimeout(calc,180); });
+    });
+    document.getElementById('cfg-recalc').onclick=calc;
+
+    function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,a|1);t=t+Math.imul(t^t>>>7,t|61)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+    function calc(){
+      const capital=Math.max(1, Number(elCap.value)||250);
+      const rb=Math.max(0.1, Number(elRb.value)||2.5);
+      const wr=Math.min(99, Math.max(1, Number(elWr.value)||40))/100;
+      const comPct=Math.max(0, Number(elCom.value)||0); // % round-trip on notional
+      const p=perfiles[perfil];
+      const riesgoPct=p.riesgo_pct;
+      const apal=p.apalancamiento_max;
+      const riesgoEur=+(capital*riesgoPct/100).toFixed(2);
+      // Commission in € ≈ comPct% of notional; notional ≈ capital * apal (máx. uso)
+      // Per trade cost using typical notional at max leverage fraction for the risk:
+      // conservative: cost = comPct/100 * (capital * apal) but that's huge for extreme;
+      // better: cost on the risk-sized position: notional ≈ riesgoEur / (stopDist). Without stop, use:
+      // cost ≈ (comPct/100) * (riesgoEur * apal / (riesgoPct/100)) / capital * capital... simplify:
+      // notional_eur ≈ capital * min(apal, riesgoPct related). Use: notional = capital * apal * (riesgoPct/1) / apal_ref — too vague.
+      // Practical: commission_€ = (comPct/100) * (riesgoEur / (riesgoPct/100)) * (apal>0?1:1) wait:
+      // position notional such that risk = riesgoPct of capital with stop = 1/apal of price move roughly:
+      // notional ≈ capital * apal when fully leveraged; for risk-based: notional ≈ riesgoEur / stop_pct.
+      // Assume stop ≈ 1/apal of notional → riesgoEur ≈ notional/apal → notional ≈ riesgoEur*apal
+      const nocionalEur = +(riesgoEur * apal).toFixed(2);
+      const comisionEur = +((comPct/100) * nocionalEur).toFixed(4);
+      let objetivoEur;
+      if(elMode.value==='mult'){
+        const m=Math.max(0.01, Number(elObj.value)||10);
+        objetivoEur=+(capital*m).toFixed(2);
+      } else {
+        objetivoEur=Math.max(capital*1.01, Number(elObj.value)||1000);
+      }
+      const gananciaNec=objetivoEur-capital;
+      // Net R after commission: win = +rb*riesgo - comision; loss = -riesgo - comision
+      const winNet = rb*riesgoEur - comisionEur;
+      const lossNet = riesgoEur + comisionEur;
+      const expEur = wr*winNet - (1-wr)*lossNet;
+      const expR = riesgoEur>0 ? expEur/riesgoEur : 0;
+      let nWinsNet = SIN, nTradesEst = SIN;
+      if(expEur>0){
+        nTradesEst = Math.ceil(gananciaNec / expEur);
+        nWinsNet = Math.ceil(gananciaNec / Math.max(winNet, 1e-9));
+      }
+      const outs=[
+        ['Riesgo / operación', money(riesgoEur, mon)+' ('+riesgoPct+'%)'],
+        ['Apalancamiento máx.', apal+'x'],
+        ['Nocional tip. (riesgo×apal)', money(nocionalEur, mon)],
+        ['Coste com+spread / trade', money(comisionEur, mon)+' ('+comPct+'%)'],
+        ['R/B objetivo', '1:'+rb],
+        ['Equity objetivo', money(objetivoEur, mon)],
+        ['E[€] / trade (neto com.)', expEur>0?money(+expEur.toFixed(4), mon):'≤0 (edge insuficiente)'],
+        ['E[R] neto', expR>0?expR.toFixed(3):'≤0'],
+        ['Wins netas (≈) p/ objetivo', nWinsNet===SIN?SIN:String(nWinsNet)],
+        ['Trades est. (≈)', nTradesEst===SIN?SIN:String(nTradesEst)],
+      ];
+      if(perfil==='Scalping' && p.ops_dia){
+        outs.push(['Ops/día (perfil)', String(p.ops_dia)]);
+        outs.push(['Coste com. / día (≈)', money(+(comisionEur*p.ops_dia).toFixed(2), mon)]);
+      }
+      if(p.alta_conviccion){
+        const acR=+(capital*p.alta_conviccion.riesgo_pct/100).toFixed(2);
+        outs.push(['Alta convicción riesgo', money(acR, mon)+' ('+p.alta_conviccion.riesgo_pct+'%)']);
+        outs.push(['Alta convicción apal.', p.alta_conviccion.apalancamiento_max+'x']);
+      }
+      document.getElementById('cfg-out').innerHTML=outs.map(([l,v])=>'<div class="stat"><div class="lbl">'+esc(l)+'</div><div class="val'+(v===SIN?' sin':'')+'">'+esc(String(v))+'</div></div>').join('');
+
+      // Monte Carlo 2000 with commissions
+      const N=2000, burn=capital*0.2;
+      let hit=0, ruined=0, neither=0;
+      const rng=mulberry32(0xC0FFEE ^ Math.floor(capital*100) ^ Math.floor(wr*1000) ^ Math.floor(rb*10) ^ Math.floor(comPct*1000) ^ perfil.length);
+      const maxTrades = perfil==='Scalping' ? 20000 : 5000;
+      for(let i=0;i<N;i++){
+        let eq=capital;
+        let done=false;
+        for(let tr=0;tr<maxTrades;tr++){
+          const riskNow = eq * riesgoPct/100;
+          const notional = riskNow * apal;
+          const fee = (comPct/100) * notional;
+          const win=rng()<wr;
+          eq += win ? (rb*riskNow - fee) : (-riskNow - fee);
+          if(eq>=objetivoEur){ hit++; done=true; break; }
+          if(eq<=burn || eq<=0){ ruined++; done=true; break; }
+        }
+        if(!done) neither++;
+      }
+      const pHit=hit/N*100, pRuin=ruined/N*100;
+      document.getElementById('mc-ok').style.width=pHit.toFixed(1)+'%';
+      document.getElementById('mc-bad').style.width=pRuin.toFixed(1)+'%';
+      document.getElementById('mc-txt').innerHTML=
+        '<strong style="color:var(--ok)">P(objetivo): '+pHit.toFixed(1)+'%</strong> · '+
+        '<strong style="color:var(--bad)">P(quemar −80%): '+pRuin.toFixed(1)+'%</strong> · '+
+        'sin resolución: '+(neither/N*100).toFixed(1)+'% · N='+N+' · comisiones incluidas';
+
+      const wrLabel = wrUsable ? ('win rate real journal ('+cerradas+' cerradas)') : ('SUPUESTO win rate '+(wr*100).toFixed(1)+'% (<10 cerradas)');
+      const txt =
+'Mesa de Trading — configuración (simulación local)\n'+
+'Capital: '+capital+' '+mon+'\n'+
+'Perfil: '+perfil+' (riesgo '+riesgoPct+'% / apal ≤'+apal+'x)'+(p.alta_conviccion?(' | alta convicción '+p.alta_conviccion.riesgo_pct+'% / ≤'+p.alta_conviccion.apalancamiento_max+'x'):'')+'\n'+
+'R/B objetivo: 1:'+rb+'\n'+
+'Comisión+spread (SUPUESTO): '+comPct+'% ida-vuelta → ~'+comisionEur+' '+mon+'/trade\n'+
+'Objetivo equity: '+objetivoEur+' '+mon+'\n'+
+'Riesgo/op: '+riesgoEur+' '+mon+'\n'+
+wrLabel+'\n'+
+'Monte Carlo '+N+' (con comisiones): P(objetivo)='+pHit.toFixed(1)+'% | P(quemar -80%)='+pRuin.toFixed(1)+'%\n'+
+'Wins netas ≈ '+nWinsNet+' | trades est. ≈ '+nTradesEst+'\n'+
+'AVISO: MODO SIMULACIÓN — nada garantiza beneficios. No se ha guardado en servidor.';
+      document.getElementById('cfg-resumen').textContent=txt;
+      window.__cfgCopyText=txt;
+    }
+
+    document.getElementById('cfg-copy').onclick=async()=>{
+      const text=window.__cfgCopyText||'';
+      try{
+        await navigator.clipboard.writeText(text);
+        document.getElementById('cfg-copy-status').textContent='Copiado';
+      }catch(e){
+        const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); document.getElementById('cfg-copy-status').textContent='Copiado'; }
+        catch(e2){ document.getElementById('cfg-copy-status').textContent='No se pudo copiar'; }
+        ta.remove();
+      }
+      setTimeout(()=>{document.getElementById('cfg-copy-status').textContent='';},2500);
+    };
+
+    setPerfil(perfil);
+  })();
+
+
 })();
 </script>
 </body>
