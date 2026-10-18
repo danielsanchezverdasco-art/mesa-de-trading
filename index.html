@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 07:56 UTC",
+  "generado_utc": "2026-10-18 08:08 UTC",
   "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -38,23 +38,31 @@ window.MESA_DATA = {
     "aportaciones": 0.0,
     "aportaciones_detalle": [],
     "capital_invertido": 250.0,
-    "equity": 250.0,
-    "pnl_realizado": 0,
-    "pnl_por_mercado": {},
-    "ganancias_netas": 0.0,
-    "abiertas": 5,
+    "equity": 245.11,
+    "pnl_realizado": -4.89,
+    "pnl_por_mercado": {
+      "cripto": -4.89
+    },
+    "ganancias_netas": -4.89,
+    "abiertas": 4,
     "pendientes": 2,
-    "cerradas": 0,
+    "cerradas": 1,
     "total_operaciones": 7,
-    "win_rate_pct": "sin datos",
-    "profit_factor": "sin datos",
-    "max_drawdown_pct": "sin datos",
-    "r_medio": "sin datos",
+    "win_rate_pct": 0.0,
+    "profit_factor": 0.0,
+    "max_drawdown_pct": 1.96,
+    "r_medio": -0.98,
     "curva_capital": [
       {
         "fecha": "2026-10-17",
         "equity": 250.0,
         "evento": "capital_inicial"
+      },
+      {
+        "fecha": "2026-10-18 08:00",
+        "equity": 245.11,
+        "evento": "T0007",
+        "pnl": -4.89
       }
     ],
     "moneda": "EUR"
@@ -135,7 +143,7 @@ window.MESA_DATA = {
       "fecha_cierre": "",
       "precio_cierre": "",
       "comisiones_eur": "",
-      "funding_eur": "0.000",
+      "funding_eur": "0.026",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
@@ -162,7 +170,7 @@ window.MESA_DATA = {
       "fecha_cierre": "",
       "precio_cierre": "",
       "comisiones_eur": "",
-      "funding_eur": "0.000",
+      "funding_eur": "-0.042",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
@@ -189,7 +197,7 @@ window.MESA_DATA = {
       "fecha_cierre": "",
       "precio_cierre": "",
       "comisiones_eur": "",
-      "funding_eur": "0.000",
+      "funding_eur": "-0.009",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
@@ -216,7 +224,7 @@ window.MESA_DATA = {
       "fecha_cierre": "",
       "precio_cierre": "",
       "comisiones_eur": "",
-      "funding_eur": "0.000",
+      "funding_eur": "0.003",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
@@ -239,15 +247,15 @@ window.MESA_DATA = {
       "apalancamiento": "20",
       "margen_usdt": "16.61",
       "precio_liq": "0.6564",
-      "estado": "abierta",
-      "fecha_cierre": "",
-      "precio_cierre": "",
-      "comisiones_eur": "",
-      "funding_eur": "0.000",
-      "pnl_eur": "",
-      "r_multiple": "",
+      "estado": "cerrada",
+      "fecha_cierre": "2026-10-18 08:00",
+      "precio_cierre": "0.6395",
+      "comisiones_eur": "0.239",
+      "funding_eur": "-0.008",
+      "pnl_eur": "-4.89",
+      "r_multiple": "-0.98",
       "esceptico": "convencido",
-      "notas": "SIMULADA. SESION AGRESIVA 18-oct. Alt short #2 (con LINK). Tendencia bajista -13.8 % 24h, maximos decrecientes 1h, bajo EMA20/50; SL sobre swing 0.6386. TP2 soporte 0.5755. Vol 24h 24M, spread 1.6bp. Esceptico (sesion agresiva: solo veta sin stop logico o liquidez mala): convencido, stop tras swing/soporte y >1 ATR, liquidez OK. CRO: apalancamiento 5x->20x, margen 16.61 USDT, liq 0.6564."
+      "notas": "SIMULADA. SESION AGRESIVA 18-oct. Alt short #2 (con LINK). Tendencia bajista -13.8 % 24h, maximos decrecientes 1h, bajo EMA20/50; SL sobre swing 0.6386. TP2 soporte 0.5755. Vol 24h 24M, spread 1.6bp. Esceptico (sesion agresiva: solo veta sin stop logico o liquidez mala): convencido, stop tras swing/soporte y >1 ATR, liquidez OK. CRO: apalancamiento 5x->20x, margen 16.61 USDT, liq 0.6564. Cierre: SL (mark)."
     }
   ],
   "informe": {
@@ -317,7 +325,7 @@ window.MESA_DATA = {
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
       "bocadillo": "Setups: 3 · S1 ETH short (mantener T0001)",
-      "tag": "BTC 81680.06"
+      "tag": "BTC 81685.47"
     },
     {
       "id": "oportunista",
@@ -362,7 +370,7 @@ window.MESA_DATA = {
       ],
       "metodo": "Disciplina de ejecución (checklist)",
       "accion": "teclear",
-      "bocadillo": "Abiertas: 5 · Pendientes: 2 · Cerradas: 0",
+      "bocadillo": "Abiertas: 4 · Pendientes: 2 · Cerradas: 1",
       "tag": "PEND 2"
     },
     {
@@ -377,7 +385,7 @@ window.MESA_DATA = {
       ],
       "metodo": "Revisión estadística post-trade",
       "accion": "papeles",
-      "bocadillo": "WR: sin datos · PF: sin datos · MDD: sin datos",
+      "bocadillo": "WR: 0.0 · PF: 0.0 · MDD: 1.96",
       "tag": "STATS"
     },
     {
@@ -413,22 +421,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 81680.06,
-      "cambio_pct": -0.03,
+      "precio": 81685.47,
+      "cambio_pct": -0.05,
       "fuente": "Binance",
-      "hora": "2026-10-18 07:56 UTC"
+      "hora": "2026-10-18 08:08 UTC"
     },
     "ETH": {
-      "precio": 2408.53,
+      "precio": 2408.52,
       "cambio_pct": -1.05,
       "fuente": "Binance",
-      "hora": "2026-10-18 07:56 UTC"
+      "hora": "2026-10-18 08:08 UTC"
     },
     "SOL": {
-      "precio": 103.31,
-      "cambio_pct": -1.66,
+      "precio": 103.22,
+      "cambio_pct": -1.73,
       "fuente": "Binance",
-      "hora": "2026-10-18 07:56 UTC"
+      "hora": "2026-10-18 08:08 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -548,7 +556,7 @@ window.MESA_DATA = {
     },
     {
       "hora": "2026-10-18 07:48",
-      "msg": "EJEC · T0007 TIAUSDT short · abierta"
+      "msg": "EJEC · T0007 TIAUSDT short · cerrada"
     },
     {
       "hora": "2026-10-18 07:48",
@@ -556,15 +564,15 @@ window.MESA_DATA = {
     },
     {
       "hora": "2026-10-18 23:40",
-      "msg": "AUDITOR · equity 250.0 EUR · abiertas 5"
+      "msg": "AUDITOR · equity 245.11 EUR · abiertas 4"
     },
     {
-      "hora": "2026-10-18 07:56 UTC",
-      "msg": "TAPE · BTC 81680.06 (-0.03%) · 2026-10-18 07:56 UTC"
+      "hora": "2026-10-18 08:08 UTC",
+      "msg": "TAPE · BTC 81685.47 (-0.05%) · 2026-10-18 08:08 UTC"
     },
     {
-      "hora": "2026-10-18 07:56 UTC",
-      "msg": "TAPE · ETH 2408.53 (-1.05%) · 2026-10-18 07:56 UTC"
+      "hora": "2026-10-18 08:08 UTC",
+      "msg": "TAPE · ETH 2408.52 (-1.05%) · 2026-10-18 08:08 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -572,7 +580,7 @@ window.MESA_DATA = {
     }
   ],
   "pnl_vivo": {
-    "hora_utc": "2026-10-18 07:57:00 UTC",
+    "hora_utc": "2026-10-18 08:08:17 UTC",
     "eur_usd": 1.1253,
     "maker": 0.0002,
     "taker": 0.0006,
@@ -593,7 +601,7 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 2407.33,
+        "mark": 2407.57,
         "pnl_eur": null
       },
       {
@@ -611,7 +619,7 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 103.266,
+        "mark": 103.179,
         "pnl_eur": null
       },
       {
@@ -626,11 +634,11 @@ window.MESA_DATA = {
         "apalancamiento": "20",
         "margen_usdt": 36.46,
         "riesgo_eur": "10.0",
-        "funding_eur": 0.0,
+        "funding_eur": 0.026,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 11.981,
-        "pnl_eur": -2.19
+        "mark": 11.964,
+        "pnl_eur": -1.24
       },
       {
         "id": "T0004",
@@ -644,11 +652,11 @@ window.MESA_DATA = {
         "apalancamiento": "20",
         "margen_usdt": 48.46,
         "riesgo_eur": "7.49",
-        "funding_eur": 0.0,
+        "funding_eur": -0.042,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 1.2927,
-        "pnl_eur": -0.7
+        "mark": 1.2912,
+        "pnl_eur": -1.74
       },
       {
         "id": "T0005",
@@ -662,11 +670,11 @@ window.MESA_DATA = {
         "apalancamiento": "20",
         "margen_usdt": 37.11,
         "riesgo_eur": "7.5",
-        "funding_eur": 0.0,
+        "funding_eur": -0.009,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 78.358,
-        "pnl_eur": -1.55
+        "mark": 78.665,
+        "pnl_eur": 1.02
       },
       {
         "id": "T0006",
@@ -680,37 +688,19 @@ window.MESA_DATA = {
         "apalancamiento": "20",
         "margen_usdt": 12.82,
         "riesgo_eur": "5.0",
-        "funding_eur": 0.0,
+        "funding_eur": 0.003,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 1.736,
-        "pnl_eur": -0.14
-      },
-      {
-        "id": "T0007",
-        "activo": "TIAUSDT",
-        "direccion": "short",
-        "estado": "abierta",
-        "entrada": 0.6296,
-        "tamano": 527.7,
-        "sl": "0.6395",
-        "tp2": "0.5755",
-        "apalancamiento": "20",
-        "margen_usdt": 16.61,
-        "riesgo_eur": "5.0",
-        "funding_eur": 0.0,
-        "fee_entrada": 0.0006,
-        "fee_salida": 0.0006,
-        "mark": 0.6315,
-        "pnl_eur": -1.25
+        "mark": 1.734,
+        "pnl_eur": -0.4
       }
     ],
-    "pnl_abierto_eur": -5.83
+    "pnl_abierto_eur": -2.36
   },
   "tags": {
     "sentimiento": "FEAR&GREED 53 Neutral",
     "macro": "RISK-OFF moderado, bajista …",
-    "trader": "BTC 81680.06",
+    "trader": "BTC 81685.47",
     "oportunista": "SQUEEZE?",
     "cro": "OK 2 · NO 1",
     "esceptico": "SÍ/NO",
@@ -719,13 +709,13 @@ window.MESA_DATA = {
     "coo": "SIM 250€"
   },
   "cuenta": {
-    "equity": 250.0,
-    "pnl_realizado": 0,
+    "equity": 245.11,
+    "pnl_realizado": -4.89,
     "capital_inicial": 250.0,
     "capital_invertido": 250.0,
-    "riesgo_abierto_eur": 49.69,
+    "riesgo_abierto_eur": 44.69,
     "moneda": "EUR",
-    "abiertas": 5,
+    "abiertas": 4,
     "pendientes": 2
   },
   "configuracion": {
@@ -755,8 +745,8 @@ window.MESA_DATA = {
       ],
       "aprobado_por": "Daniel 2026-10-17"
     },
-    "win_rate_pct": "sin datos",
-    "operaciones_cerradas": 0,
+    "win_rate_pct": 0.0,
+    "operaciones_cerradas": 1,
     "perfiles": {
       "Conservador": {
         "riesgo_pct": 0.5,
