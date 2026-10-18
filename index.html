@@ -44,10 +44,10 @@ window.MESA_DATA = {
       "cripto": -6.56
     },
     "ganancias_netas": -6.56,
-    "abiertas": 4,
+    "abiertas": 5,
     "pendientes": 0,
     "cerradas": 2,
-    "total_operaciones": 8,
+    "total_operaciones": 9,
     "win_rate_pct": 0.0,
     "profit_factor": 0.0,
     "max_drawdown_pct": 2.62,
@@ -277,9 +277,9 @@ window.MESA_DATA = {
       "tp3": "1.0201",
       "tamano": "1685.2",
       "riesgo_eur": "15.82",
-      "apalancamiento": "10",
-      "margen_usdt": "176.64",
-      "precio_liq": "1.1448",
+      "apalancamiento": "20",
+      "margen_usdt": "88.32",
+      "precio_liq": "1.0927",
       "estado": "abierta",
       "fecha_cierre": "",
       "precio_cierre": "",
@@ -288,7 +288,34 @@ window.MESA_DATA = {
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
-      "notas": "SIMULADA. SESION AGRESIVA (techo extremo) 08:25. Top variacion 24h (-8.8 %). Short FIL: 1h bajista (bajo EMA20/50, RSI 35), maximos decrecientes en 15m; SL 1.0575 sobre resistencia 1.0573 y maximos 15m. TP1 1.0374 soporte, TP2 1.0208 soporte 1h, TP3 1.0201. Vol 15M, spread 1bp. Esceptico: convencido (stop logico, liquidez OK)."
+      "notas": "SIMULADA. SESION AGRESIVA (techo extremo) 08:25. Top variacion 24h (-8.8 %). Short FIL: 1h bajista (bajo EMA20/50, RSI 35), maximos decrecientes en 15m; SL 1.0575 sobre resistencia 1.0573 y maximos 15m. TP1 1.0374 soporte, TP2 1.0208 soporte 1h, TP3 1.0201. Vol 15M, spread 1bp. Esceptico: convencido (stop logico, liquidez OK). CRO: 10x->20x para liberar margen, margen 88.32 USDT, liq 1.0927."
+    },
+    {
+      "id": "T0009",
+      "fecha_apertura": "2026-10-18 08:27",
+      "activo": "ENAUSDT",
+      "mercado": "cripto",
+      "exchange": "bitget-futures-sim",
+      "direccion": "long",
+      "entrada": "0.18719",
+      "sl": "0.1855",
+      "tp1": "0.18884",
+      "tp2": "0.19315",
+      "tp3": "0.19795",
+      "tamano": "6009",
+      "riesgo_eur": "10.22",
+      "apalancamiento": "20",
+      "margen_usdt": "56.24",
+      "precio_liq": "0.17912",
+      "estado": "abierta",
+      "fecha_cierre": "",
+      "precio_cierre": "",
+      "comisiones_eur": "",
+      "funding_eur": "",
+      "pnl_eur": "",
+      "r_multiple": "",
+      "esceptico": "convencido",
+      "notas": "SIMULADA. SESION AGRESIVA (techo extremo) 08:25. Top variacion 24h (-5.3 %). Long ENA en soporte 0.1868 (15m/1h) tras caida, RSI1h 37; SL 0.1855 bajo soportes 0.18589/0.18613. TP1 0.18884, TP2 0.19315 (resistencia 1h), TP3 0.19795. Alt long #2 con HYPE. Vol 13M, spread 0.5bp. Riesgo limitado por el hueco del 20 % agregado. Esceptico: convencido (stop logico, liquidez OK). CRO: 12x->20x para liberar margen, margen 56.24 USDT, liq 0.17912."
     }
   ],
   "informe": {
@@ -403,8 +430,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Disciplina de ejecución (checklist)",
       "accion": "teclear",
-      "bocadillo": "Abiertas: 4 · Pendientes: 0 · Cerradas: 2",
-      "tag": "OPEN 4"
+      "bocadillo": "Abiertas: 5 · Pendientes: 0 · Cerradas: 2",
+      "tag": "OPEN 5"
     },
     {
       "id": "auditor",
@@ -466,8 +493,8 @@ window.MESA_DATA = {
       "hora": "2026-10-18 08:27 UTC"
     },
     "SOL": {
-      "precio": 103.24,
-      "cambio_pct": -1.66,
+      "precio": 103.23,
+      "cambio_pct": -1.68,
       "fuente": "Binance",
       "hora": "2026-10-18 08:27 UTC"
     },
@@ -604,8 +631,16 @@ window.MESA_DATA = {
       "msg": "ESCÉPTICO · T0008 veredicto: convencido"
     },
     {
+      "hora": "2026-10-18 08:27",
+      "msg": "EJEC · T0009 ENAUSDT long · abierta"
+    },
+    {
+      "hora": "2026-10-18 08:27",
+      "msg": "ESCÉPTICO · T0009 veredicto: convencido"
+    },
+    {
       "hora": "2026-10-18 23:40",
-      "msg": "AUDITOR · equity 243.44 EUR · abiertas 4"
+      "msg": "AUDITOR · equity 243.44 EUR · abiertas 5"
     },
     {
       "hora": "2026-10-18 08:27 UTC",
@@ -621,7 +656,7 @@ window.MESA_DATA = {
     }
   ],
   "pnl_vivo": {
-    "hora_utc": "2026-10-18 08:27:03 UTC",
+    "hora_utc": "2026-10-18 08:27:24 UTC",
     "eur_usd": 1.1253,
     "maker": 0.0002,
     "taker": 0.0006,
@@ -660,8 +695,8 @@ window.MESA_DATA = {
         "funding_eur": -0.009,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 78.706,
-        "pnl_eur": 1.37
+        "mark": 78.697,
+        "pnl_eur": 1.29
       },
       {
         "id": "T0006",
@@ -690,17 +725,35 @@ window.MESA_DATA = {
         "tamano": 1685.2,
         "sl": "1.0575",
         "tp2": "1.0208",
-        "apalancamiento": "10",
-        "margen_usdt": 176.64,
+        "apalancamiento": "20",
+        "margen_usdt": 88.32,
         "riesgo_eur": "15.82",
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
         "mark": 1.0481,
         "pnl_eur": -1.73
+      },
+      {
+        "id": "T0009",
+        "activo": "ENAUSDT",
+        "direccion": "long",
+        "estado": "abierta",
+        "entrada": 0.18719,
+        "tamano": 6009.0,
+        "sl": "0.1855",
+        "tp2": "0.19315",
+        "apalancamiento": "20",
+        "margen_usdt": 56.24,
+        "riesgo_eur": "10.22",
+        "funding_eur": 0.0,
+        "fee_entrada": 0.0006,
+        "fee_salida": 0.0006,
+        "mark": 0.18717,
+        "pnl_eur": -1.31
       }
     ],
-    "pnl_abierto_eur": -2.04
+    "pnl_abierto_eur": -3.43
   },
   "tags": {
     "sentimiento": "FEAR&GREED 53 Neutral",
@@ -709,7 +762,7 @@ window.MESA_DATA = {
     "oportunista": "SQUEEZE?",
     "cro": "OK 2 · NO 1",
     "esceptico": "SÍ/NO",
-    "ejecucion": "OPEN 4",
+    "ejecucion": "OPEN 5",
     "auditor": "STATS",
     "coo": "SIM 250€"
   },
@@ -718,9 +771,9 @@ window.MESA_DATA = {
     "pnl_realizado": -6.56,
     "capital_inicial": 250.0,
     "capital_invertido": 250.0,
-    "riesgo_abierto_eur": 38.32,
+    "riesgo_abierto_eur": 48.54,
     "moneda": "EUR",
-    "abiertas": 4,
+    "abiertas": 5,
     "pendientes": 0
   },
   "configuracion": {
