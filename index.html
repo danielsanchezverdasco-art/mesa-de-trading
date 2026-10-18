@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 05:06 UTC",
+  "generado_utc": "2026-10-18 06:04 UTC",
   "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -116,29 +116,27 @@ window.MESA_DATA = {
     }
   ],
   "informe": {
-    "archivo": "informe-2026-10-17.md",
-    "fecha": "2026-10-17",
-    "sesgo_macro": "RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta.",
-    "sentimiento_score": "55",
-    "sentimiento_label": "Greed",
-    "dominancia_btc": "59,48%",
+    "archivo": "informe-2026-10-18.md",
+    "fecha": "2026-10-18",
+    "sesgo_macro": "RISK-OFF moderado, bajista para cripto en 4h; lateral en 1h de fin de semana.",
+    "sentimiento_score": "53",
+    "sentimiento_label": "Neutral",
+    "dominancia_btc": "59,51 %",
     "setups": [
-      "S1 ETH short (limit)",
-      "S2 BTC short (limit)",
-      "S3 BTC long (limit)",
-      "S4 EUR/USD long (plan lunes)"
+      "S1 ETH short (mantener T0001)",
+      "S2 SOL short (mantener T0002)",
+      "S3 BTC short (limit)"
     ],
     "aprobados": [
-      "S1 ETHUSDT: short · CRO: ✅ **APROBADO**"
+      "S1 ETHUSDT: short · CRO: ✅ APROBADO (mantener T0001)",
+      "S2 SOLUSDT: short · CRO: ✅ APROBADO (mantener T0002)"
     ],
     "rechazados": [
-      "S2 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)",
-      "S3 BTCUSDT: long · CRO: ❌ Rechazado (contra-tendencia)",
-      "S4 EURUSD: long · CRO: ❌ Rechazado / vigilancia lunes"
+      "S3 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)"
     ],
-    "debate_esceptico": "**S1 ETH short** — Escéptico: \"ETH ya está sobre soporte 2.393 con RSI 4h 40; las ballenas rotaron BTC→ETH la semana pasada; hay ~900 M$ en cortos BTC/ETH en Hyperliquid: squeeze.\" Trader: \"No vendo en soporte: la orden es limit en el *rebote* a 2.435 (EMA20 4h), con SL sobre la estructura 2.467. ETH/BTC débil (ETH −6,3% bajo EMA200 4h), dominancia BTC 59,5%, F&G aún 55 con margen de caer, macro risk-off (VIX 20, 10a 5,1%). Si hay squeeze sobre 2",
-    "veredicto_esceptico": "CONVENCIDO · NO convencido · NO convencido · NO convencido",
-    "resumen_coo": "- **T0001 ETHUSDT short — PENDIENTE (limit sell 2.435)**, SL 2.470, TP 2.394/2.324/2.300, 0,0804 ETH, riesgo 2,50 €, esceptico=convencido. Gestión: 40% TP1 + SL a breakeven, 40% TP2, 20% TP3 (el script simplifica a cierre total en TP2). Expira 48 h si no se activa."
+    "debate_esceptico": "**S1/S2** — siguen con la tesis de ayer; ningún dato nuevo la invalida. **Veredicto: CONVENCIDO** (mantener, con caducidad de 48 h). **S3 BTC short** — \"Tercer short sobre el mismo factor; R/B 2,7 apenas sobre el mínimo, BTC acaba de recuperar EMA20/50 1h y el TP2 cae sobre la zona de 80k, la más defendida.\" **Veredicto: NO convencido** (correlación + objetivo sobre soporte mayor).",
+    "veredicto_esceptico": "CONVENCIDO · NO convencido",
+    "resumen_coo": "Sin operaciones nuevas. Se mantienen T0001 y T0002 pendientes."
   },
   "roles": [
     {
@@ -153,8 +151,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Druckenmiller y Dalio",
       "accion": "investigando",
-      "bocadillo": "Sesgo macro: RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta. · Dom BTC:…",
-      "tag": "RISK-OFF moderado / bajista…"
+      "bocadillo": "Sesgo macro: RISK-OFF moderado, bajista para cripto en 4h; lateral en 1h de fin de semana. · Dom BT…",
+      "tag": "RISK-OFF moderado, bajista …"
     },
     {
       "id": "sentimiento",
@@ -168,8 +166,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Lectura contraria del FOMO y el miedo",
       "accion": "lupa",
-      "bocadillo": "Fear & Greed: 55 (Greed)",
-      "tag": "FEAR&GREED 55 Greed"
+      "bocadillo": "Fear & Greed: 53 (Neutral)",
+      "tag": "FEAR&GREED 53 Neutral"
     },
     {
       "id": "trader",
@@ -183,8 +181,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
-      "bocadillo": "Setups: 4 · S1 ETH short (limit)",
-      "tag": "BTC 81795.21"
+      "bocadillo": "Setups: 3 · S1 ETH short (mantener T0001)",
+      "tag": "BTC 81768.02"
     },
     {
       "id": "oportunista",
@@ -198,7 +196,7 @@ window.MESA_DATA = {
       ],
       "metodo": "Soros (asimetría y catalizadores)",
       "accion": "graficos",
-      "bocadillo": "Asimetría: S1 ETH short (limit)",
+      "bocadillo": "Asimetría: S1 ETH short (mantener T0001)",
       "tag": "SQUEEZE?"
     },
     {
@@ -214,8 +212,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Paul Tudor Jones",
       "accion": "sello",
-      "bocadillo": "Aprobados: 1 · Rechazados: 3",
-      "tag": "OK 1 · NO 3"
+      "bocadillo": "Aprobados: 2 · Rechazados: 1",
+      "tag": "OK 2 · NO 1"
     },
     {
       "id": "ejecucion",
@@ -259,7 +257,7 @@ window.MESA_DATA = {
       ],
       "metodo": "Munger (inversión del problema)",
       "accion": "asentir",
-      "bocadillo": "Debate: **S1 ETH short** — Escéptico: \"ETH ya está sobre soporte 2.393 con RSI 4h 40; las ballenas…",
+      "bocadillo": "Debate: **S1/S2** — siguen con la tesis de ayer; ningún dato nuevo la invalida. **Veredicto: CONVEN…",
       "tag": "SÍ/NO"
     },
     {
@@ -274,28 +272,28 @@ window.MESA_DATA = {
       ],
       "metodo": "Coordinación de mesa (simulación)",
       "accion": "coordinar",
-      "bocadillo": "- **T0001 ETHUSDT short — PENDIENTE (limit sell 2.435)**, SL 2.470, TP 2.394/2.324/2.300,…",
+      "bocadillo": "Sin operaciones nuevas. Se mantienen T0001 y T0002 pendientes.",
       "tag": "SIM 250€"
     }
   ],
   "precios": {
     "BTC": {
-      "precio": 81795.21,
-      "cambio_pct": 0.21,
+      "precio": 81768.02,
+      "cambio_pct": 0.26,
       "fuente": "Binance",
-      "hora": "2026-10-18 05:06 UTC"
+      "hora": "2026-10-18 06:04 UTC"
     },
     "ETH": {
-      "precio": 2415.7,
-      "cambio_pct": -0.56,
+      "precio": 2413.54,
+      "cambio_pct": -0.58,
       "fuente": "Binance",
-      "hora": "2026-10-18 05:06 UTC"
+      "hora": "2026-10-18 06:04 UTC"
     },
     "SOL": {
-      "precio": 103.82,
-      "cambio_pct": -1.12,
+      "precio": 103.77,
+      "cambio_pct": -0.99,
       "fuente": "Binance",
-      "hora": "2026-10-18 05:06 UTC"
+      "hora": "2026-10-18 06:04 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -330,48 +328,40 @@ window.MESA_DATA = {
   },
   "squawk": [
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "MACRO · RISK-OFF moderado / bajista para activos de riesgo. Volatilidad media-alta."
+      "hora": "2026-10-18 23:40",
+      "msg": "MACRO · RISK-OFF moderado, bajista para cripto en 4h; lateral en 1h de fin de semana."
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "SENT · Fear&Greed 55 Greed"
+      "hora": "2026-10-18 23:40",
+      "msg": "SENT · Fear&Greed 53 Neutral"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "QUANT · setup S1 ETH short (limit)"
+      "hora": "2026-10-18 23:40",
+      "msg": "QUANT · setup S1 ETH short (mantener T0001)"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "QUANT · setup S2 BTC short (limit)"
+      "hora": "2026-10-18 23:40",
+      "msg": "QUANT · setup S2 SOL short (mantener T0002)"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "QUANT · setup S3 BTC long (limit)"
+      "hora": "2026-10-18 23:40",
+      "msg": "QUANT · setup S3 BTC short (limit)"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "QUANT · setup S4 EUR/USD long (plan lunes)"
+      "hora": "2026-10-18 23:40",
+      "msg": "ESCÉPTICO · CONVENCIDO · NO convencido"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "ESCÉPTICO · CONVENCIDO · NO convencido · NO convencido · NO convencido"
+      "hora": "2026-10-18 23:40",
+      "msg": "CRO · APROBADO S1 ETHUSDT: short · CRO: ✅ APROBADO (mantener T0001)"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "CRO · APROBADO S1 ETHUSDT: short · CRO: ✅ **APROBADO**"
+      "hora": "2026-10-18 23:40",
+      "msg": "CRO · APROBADO S2 SOLUSDT: short · CRO: ✅ APROBADO (mantener T0002)"
     },
     {
-      "hora": "2026-10-17 23:40",
-      "msg": "CRO · RECHAZADO S2 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)"
-    },
-    {
-      "hora": "2026-10-17 23:40",
-      "msg": "CRO · RECHAZADO S3 BTCUSDT: long · CRO: ❌ Rechazado (contra-tendencia)"
-    },
-    {
-      "hora": "2026-10-17 23:40",
-      "msg": "CRO · RECHAZADO S4 EURUSD: long · CRO: ❌ Rechazado / vigilancia lunes"
+      "hora": "2026-10-18 23:40",
+      "msg": "CRO · RECHAZADO S3 BTCUSDT: short · CRO: ❌ Rechazado (Escéptico/correlación)"
     },
     {
       "hora": "2026-10-17 23:39",
@@ -390,16 +380,16 @@ window.MESA_DATA = {
       "msg": "ESCÉPTICO · T0002 veredicto: convencido"
     },
     {
-      "hora": "2026-10-17 23:40",
+      "hora": "2026-10-18 23:40",
       "msg": "AUDITOR · equity 250.0 EUR · abiertas 0"
     },
     {
-      "hora": "2026-10-18 05:06 UTC",
-      "msg": "TAPE · BTC 81795.21 (0.21%) · 2026-10-18 05:06 UTC"
+      "hora": "2026-10-18 06:04 UTC",
+      "msg": "TAPE · BTC 81768.02 (0.26%) · 2026-10-18 06:04 UTC"
     },
     {
-      "hora": "2026-10-18 05:06 UTC",
-      "msg": "TAPE · ETH 2415.7 (-0.56%) · 2026-10-18 05:06 UTC"
+      "hora": "2026-10-18 06:04 UTC",
+      "msg": "TAPE · ETH 2413.54 (-0.58%) · 2026-10-18 06:04 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -407,11 +397,11 @@ window.MESA_DATA = {
     }
   ],
   "tags": {
-    "sentimiento": "FEAR&GREED 55 Greed",
-    "macro": "RISK-OFF moderado / bajista…",
-    "trader": "BTC 81795.21",
+    "sentimiento": "FEAR&GREED 53 Neutral",
+    "macro": "RISK-OFF moderado, bajista …",
+    "trader": "BTC 81768.02",
     "oportunista": "SQUEEZE?",
-    "cro": "OK 1 · NO 3",
+    "cro": "OK 2 · NO 1",
     "esceptico": "SÍ/NO",
     "ejecucion": "PEND 2",
     "auditor": "STATS",
