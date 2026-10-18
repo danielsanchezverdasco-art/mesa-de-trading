@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 10:25 UTC",
+  "generado_utc": "2026-10-18 10:26 UTC",
   "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -706,7 +706,7 @@ window.MESA_DATA = {
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
       "bocadillo": "Setups: 3 · S1 ETH short (mantener T0001)",
-      "tag": "BTC 82210.54"
+      "tag": "BTC 82200.0"
     },
     {
       "id": "oportunista",
@@ -802,22 +802,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 82210.54,
-      "cambio_pct": 0.72,
+      "precio": 82200.0,
+      "cambio_pct": 0.71,
       "fuente": "Binance",
-      "hora": "2026-10-18 10:25 UTC"
+      "hora": "2026-10-18 10:26 UTC"
     },
     "ETH": {
-      "precio": 2423.26,
-      "cambio_pct": -0.52,
+      "precio": 2422.82,
+      "cambio_pct": -0.53,
       "fuente": "Binance",
-      "hora": "2026-10-18 10:25 UTC"
+      "hora": "2026-10-18 10:26 UTC"
     },
     "SOL": {
-      "precio": 104.17,
-      "cambio_pct": -0.54,
+      "precio": 104.13,
+      "cambio_pct": -0.58,
       "fuente": "Binance",
-      "hora": "2026-10-18 10:25 UTC"
+      "hora": "2026-10-18 10:26 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -1013,7 +1013,7 @@ window.MESA_DATA = {
     }
   ],
   "pnl_vivo": {
-    "hora_utc": "2026-10-18 10:25:53 UTC",
+    "hora_utc": "2026-10-18 10:26:32 UTC",
     "eur_usd": 1.1253,
     "maker": 0.0002,
     "taker": 0.0006,
@@ -1052,8 +1052,8 @@ window.MESA_DATA = {
         "funding_eur": -0.009,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 79.078,
-        "pnl_eur": 4.49
+        "mark": 79.061,
+        "pnl_eur": 4.35
       },
       {
         "id": "T0006",
@@ -1106,8 +1106,8 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 0.004316,
-        "pnl_eur": 13.28
+        "mark": 0.004317,
+        "pnl_eur": 13.58
       },
       {
         "id": "T0013",
@@ -1124,8 +1124,8 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 2.48403,
-        "pnl_eur": 4.73
+        "mark": 2.48283,
+        "pnl_eur": 4.68
       },
       {
         "id": "T0014",
@@ -1142,8 +1142,8 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0002,
         "fee_salida": 0.0006,
-        "mark": 1.0643,
-        "pnl_eur": 0.9
+        "mark": 1.0644,
+        "pnl_eur": 0.79
       },
       {
         "id": "T0019",
@@ -1160,7 +1160,7 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 82169.6,
+        "mark": 82155.3,
         "pnl_eur": null
       },
       {
@@ -1178,7 +1178,7 @@ window.MESA_DATA = {
         "funding_eur": 0.0,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 2421.73,
+        "mark": 2421.6,
         "pnl_eur": null
       }
     ],
@@ -1187,7 +1187,7 @@ window.MESA_DATA = {
   "tags": {
     "sentimiento": "FEAR&GREED 53 Neutral",
     "macro": "RISK-OFF moderado, bajista …",
-    "trader": "BTC 82210.54",
+    "trader": "BTC 82200.0",
     "oportunista": "SQUEEZE?",
     "cro": "OK 2 · NO 1",
     "esceptico": "SÍ/NO",
@@ -1563,6 +1563,18 @@ footer{text-align:center;color:var(--muted);font-size:.65rem;padding:.75rem}
 .chat-row{display:flex;gap:.35rem}.chat-row input{flex:1;font:inherit;font-size:.8rem;padding:.5rem;background:#05070c;color:#fff;border:3px solid #2b3446}
 .chat-row button{font:inherit;font-weight:800;font-size:.75rem;background:#ffd75e;color:#000;border:3px solid #000;box-shadow:3px 3px 0 #000;padding:.4rem .7rem;cursor:pointer}
 .chat-st{font-size:.6rem;color:#6d7f9c;margin-top:.35rem}
+</style>
+<style>
+.pnl-act{font:inherit;font-size:.62rem;font-weight:800;padding:.22rem .45rem;border:2px solid #000;box-shadow:2px 2px 0 #000;cursor:pointer;color:#fff;background:#d6283b;white-space:nowrap}
+.pnl-act.cancela{background:#b8860b}.pnl-act:active{transform:translate(2px,2px);box-shadow:none}
+.pnl-ped{font-size:.6rem;color:#f0c040;white-space:nowrap}
+#pnl-modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:9999;padding:1rem}
+#pnl-modal .pm-box{background:#0b0e16;border:4px solid #d6283b;box-shadow:6px 6px 0 #000;max-width:360px;width:100%;padding:.8rem;font-family:ui-monospace,Menlo,Consolas,monospace;color:#cfe3ff}
+#pnl-modal .pm-t{font-weight:800;color:#ffd75e;margin-bottom:.4rem;font-size:.95rem}#pnl-modal .pm-b{font-size:.8rem;line-height:1.4}
+#pnl-modal small{color:#8aa0bf}#pnl-modal .pm-btns{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.7rem}
+#pnl-modal button{font:inherit;font-weight:800;padding:.45rem .8rem;border:3px solid #000;box-shadow:3px 3px 0 #000;cursor:pointer}
+#pnl-modal .pm-no{background:#1a2233;color:#cfe3ff}#pnl-modal .pm-si{background:#d6283b;color:#fff}
+@media(max-width:600px){.pnlb td,.pnlb th{padding:.2rem .18rem}.pnl-act{font-size:.56rem;padding:.2rem .3rem}}
 </style>
 </head>
 <body>
@@ -2310,9 +2322,9 @@ wrLabel+'\n'+
       <div class="cell"><div class="k">PnL abierto (${ab.length} ops)</div><div class="v ${cls(open)}">${f2(open)} €</div></div>
       <div class="cell"><div class="k">PnL realizado</div><div class="v ${cls(REAL)}">${f2(REAL)} €</div></div>
     </div>
-    <table><thead><tr><th>ID</th><th>Activo</th><th>Dir</th><th>Entrada</th><th>Mark</th><th>PnL €</th><th>% margen</th><th>% precio</th></tr></thead><tbody>
-    ${OPS.map(o=>o.estado!=='abierta'?`<tr><td>${o.id}</td><td>${o.activo.replace('USDT','')}</td><td>${o.direccion==='long'?'▲ L':'▼ S'}</td><td>${px(o.entrada)}</td><td>${px(o.mark)}</td><td colspan="3" class="pend">pendiente</td></tr>`
-      :`<tr><td>${o.id}</td><td>${o.activo.replace('USDT','')}</td><td>${o.direccion==='long'?'▲ L':'▼ S'}</td><td>${px(o.entrada)}</td><td>${px(o.mark)}</td><td class="${cls(o.pnl??0)}"><b>${o.pnl==null?'sin datos':f2(o.pnl)}</b></td><td class="${cls(o.pct_margen??0)}">${o.pct_margen==null?'—':f2(o.pct_margen)+' %'}</td><td class="${cls(o.pct_precio??0)}">${o.pct_precio==null?'—':f2(o.pct_precio)+' %'}</td></tr>`).join('')||'<tr><td colspan="8" class="pend">Sin operaciones abiertas</td></tr>'}
+    <table><thead><tr><th>ID</th><th>Activo</th><th>Dir</th><th>Entrada</th><th>Mark</th><th>PnL €</th><th>% margen</th><th>% precio</th><th></th></tr></thead><tbody>
+    ${OPS.map(o=>o.estado!=='abierta'?`<tr><td>${o.id}</td><td>${o.activo.replace('USDT','')}</td><td>${o.direccion==='long'?'▲ L':'▼ S'}</td><td>${px(o.entrada)}</td><td>${px(o.mark)}</td><td colspan="3" class="pend">pendiente</td><td>${actBtn(o,'cancela')}</td></tr>`
+      :`<tr><td>${o.id}</td><td>${o.activo.replace('USDT','')}</td><td>${o.direccion==='long'?'▲ L':'▼ S'}</td><td>${px(o.entrada)}</td><td>${px(o.mark)}</td><td class="${cls(o.pnl??0)}"><b>${o.pnl==null?'sin datos':f2(o.pnl)}</b></td><td class="${cls(o.pct_margen??0)}">${o.pct_margen==null?'—':f2(o.pct_margen)+' %'}</td><td class="${cls(o.pct_precio??0)}">${o.pct_precio==null?'—':f2(o.pct_precio)+' %'}</td><td>${actBtn(o,'cierra')}</td></tr>`).join('')||'<tr><td colspan="9" class="pend">Sin operaciones abiertas</td></tr>'}
     </tbody></table>
     <div class="ft">Simulación. PnL = tamaño × Δ mark − comisiones est. (entrada ${(P.maker*100).toFixed(2)}/${(P.taker*100).toFixed(2)} %, salida taker) + funding, en € a EUR/USD ${EU?EU.toFixed(4):'sin datos'}. Nada garantiza beneficios.</div>`;
     document.querySelectorAll('[data-pnl]').forEach(el=>el.innerHTML=html);
@@ -2327,6 +2339,31 @@ wrLabel+'\n'+
     }catch(e){ modo='snapshot'; hora=P.hora_utc||hora; }
     render();
   }
+  function actBtn(o,acc){
+    const ped=(window.MESA_ORDENES_ABIERTAS||[]).some(i=>new RegExp('\\b'+o.id+'\\b','i').test(i.title));
+    if(ped) return `<span class="pnl-ped">⏳ ${acc==='cierra'?'cierre':'cancelación'} pedido</span>`;
+    return `<button class="pnl-act ${acc}" data-acc="${acc}" data-id="${o.id}">${acc==='cierra'?'Cerrar':'Cancelar'}</button>`;
+  }
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('.pnl-act'); if(!b)return;
+    const o=OPS.find(x=>x.id===b.dataset.id); if(!o)return; const acc=b.dataset.acc, act=o.activo.replace('USDT','');
+    const pnlTxt=o.pnl==null?'pendiente (sin PnL)':f2(o.pnl)+' €';
+    pnlModal(`${acc==='cierra'?'¿Cerrar':'¿Cancelar'} ${o.id} ${act}?`,`PnL actual: <b class="${cls(o.pnl??0)}">${pnlTxt}</b><br><small>Se abrirá GitHub para que firmes la orden (paper trading). El equipo la ejecuta en el siguiente ciclo (≤ 15 min) a precio real de Bitget.</small>`,()=>{
+      const title=`${acc} ${o.id} ${act}`;
+      const body=`Orden: ${title}\nID: ${o.id}\nActivo: ${o.activo}\nDirección: ${o.direccion}\nEstado: ${o.estado}\nPnL visto en la web: ${pnlTxt} (mark ${o.mark??'—'}, ${new Date().toISOString().slice(0,16).replace('T',' ')} UTC)\n\n(Enviada desde el marcador de la Mesa · paper trading)`;
+      window.open('https://github.com/danielsanchezverdasco-art/mesa-de-trading/issues/new?labels=orden&title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body),'_blank','noopener');
+    });
+  });
+  function pnlModal(t,html,ok){
+    let m=document.getElementById('pnl-modal');
+    if(!m){m=document.createElement('div');m.id='pnl-modal';document.body.appendChild(m);}
+    m.innerHTML=`<div class="pm-box"><div class="pm-t">${t}</div><div class="pm-b">${html}</div><div class="pm-btns"><button class="pm-no">No</button><button class="pm-si">Sí, enviar orden</button></div></div>`;
+    m.style.display='flex';
+    m.querySelector('.pm-no').onclick=()=>m.style.display='none';
+    m.onclick=e=>{if(e.target===m)m.style.display='none'};
+    m.querySelector('.pm-si').onclick=()=>{m.style.display='none';ok();};
+  }
+  window.addEventListener('mesa-ordenes',render);
   render(); tick(); setInterval(tick,1000);
 })();
 </script>
@@ -2357,6 +2394,7 @@ wrLabel+'\n'+
     try{
       const issues=(await gh(API+'/issues?labels=orden&state=all&per_page=30&sort=created&direction=asc'))
         .filter(i=>!i.pull_request && i.user && i.user.login===OWNER);
+      window.MESA_ORDENES_ABIERTAS=issues.filter(i=>i.state==='open'); window.dispatchEvent(new Event('mesa-ordenes'));
       const items=[];
       for(const i of issues){
         items.push({t:i.created_at,c:'dan',html:`<span class="who">Daniel · #${i.number} · ${fh(i.created_at)}<span class="st">${i.state==='closed'?'✔ hecha':'⏳ pendiente'}</span></span>${esc(i.title)}`});
