@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 00:02 UTC",
+  "generado_utc": "2026-10-18 00:05 UTC",
   "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -157,7 +157,7 @@ window.MESA_DATA = {
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
       "bocadillo": "Setups: 4 · S1 ETH short (limit)",
-      "tag": "BTC 81409.14"
+      "tag": "BTC 81411.4"
     },
     {
       "id": "oportunista",
@@ -253,22 +253,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 81409.14,
-      "cambio_pct": -0.24,
+      "precio": 81411.4,
+      "cambio_pct": -0.23,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:02 UTC"
+      "hora": "2026-10-18 00:05 UTC"
     },
     "ETH": {
-      "precio": 2398.94,
+      "precio": 2398.58,
       "cambio_pct": -0.96,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:02 UTC"
+      "hora": "2026-10-18 00:05 UTC"
     },
     "SOL": {
-      "precio": 103.3,
-      "cambio_pct": -1.06,
+      "precio": 103.31,
+      "cambio_pct": -1.02,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:02 UTC"
+      "hora": "2026-10-18 00:05 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -359,12 +359,12 @@ window.MESA_DATA = {
       "msg": "AUDITOR · equity 250.0 EUR · abiertas 0"
     },
     {
-      "hora": "2026-10-18 00:02 UTC",
-      "msg": "TAPE · BTC 81409.14 (-0.24%) · 2026-10-18 00:02 UTC"
+      "hora": "2026-10-18 00:05 UTC",
+      "msg": "TAPE · BTC 81411.4 (-0.23%) · 2026-10-18 00:05 UTC"
     },
     {
-      "hora": "2026-10-18 00:02 UTC",
-      "msg": "TAPE · ETH 2398.94 (-0.96%) · 2026-10-18 00:02 UTC"
+      "hora": "2026-10-18 00:05 UTC",
+      "msg": "TAPE · ETH 2398.58 (-0.96%) · 2026-10-18 00:05 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -374,7 +374,7 @@ window.MESA_DATA = {
   "tags": {
     "sentimiento": "FEAR&GREED 55 Greed",
     "macro": "RISK-OFF moderado / bajista…",
-    "trader": "BTC 81409.14",
+    "trader": "BTC 81411.4",
     "oportunista": "SQUEEZE?",
     "cro": "OK 1 · NO 3",
     "esceptico": "SÍ/NO",
@@ -395,7 +395,17 @@ window.MESA_DATA = {
   "configuracion": {
     "capital_inicial": 250.0,
     "moneda": "EUR",
-    "perfil_activo": "Moderado",
+    "perfil_activo": {
+      "nombre": "extremo",
+      "objetivo": "x10 en 1 mes",
+      "riesgo_max_pct": 10,
+      "apalancamiento_max": 50,
+      "riesgo_abierto_max_pct": 20,
+      "rb_min_tp2": 2.5,
+      "stop_obligatorio_antes_de_liquidacion": true,
+      "esceptico_obligatorio": true,
+      "fijado_por": "Daniel 2026-10-18"
+    },
     "rb_minimo": 2.5,
     "riesgo_base_pct": 1.0,
     "apalancamiento_max": 3,
