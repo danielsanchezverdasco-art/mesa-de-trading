@@ -7,7 +7,7 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 08:08 UTC",
+  "generado_utc": "2026-10-18 08:27 UTC",
   "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
@@ -38,20 +38,20 @@ window.MESA_DATA = {
     "aportaciones": 0.0,
     "aportaciones_detalle": [],
     "capital_invertido": 250.0,
-    "equity": 245.11,
-    "pnl_realizado": -4.89,
+    "equity": 243.44,
+    "pnl_realizado": -6.56,
     "pnl_por_mercado": {
-      "cripto": -4.89
+      "cripto": -6.56
     },
-    "ganancias_netas": -4.89,
+    "ganancias_netas": -6.56,
     "abiertas": 4,
-    "pendientes": 2,
-    "cerradas": 1,
-    "total_operaciones": 7,
+    "pendientes": 0,
+    "cerradas": 2,
+    "total_operaciones": 8,
     "win_rate_pct": 0.0,
     "profit_factor": 0.0,
-    "max_drawdown_pct": 1.96,
-    "r_medio": -0.98,
+    "max_drawdown_pct": 2.62,
+    "r_medio": -0.6,
     "curva_capital": [
       {
         "fecha": "2026-10-17",
@@ -63,6 +63,12 @@ window.MESA_DATA = {
         "equity": 245.11,
         "evento": "T0007",
         "pnl": -4.89
+      },
+      {
+        "fecha": "2026-10-18 08:26",
+        "equity": 243.44,
+        "evento": "T0004",
+        "pnl": -1.67
       }
     ],
     "moneda": "EUR"
@@ -85,15 +91,15 @@ window.MESA_DATA = {
       "apalancamiento": "20",
       "margen_usdt": "8.52",
       "precio_liq": "2545.01",
-      "estado": "pendiente",
-      "fecha_cierre": "",
+      "estado": "cancelada",
+      "fecha_cierre": "2026-10-18 08:26",
       "precio_cierre": "",
       "comisiones_eur": "",
       "funding_eur": "",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
-      "notas": "SIMULADA. Limit sell en pullback a EMA20 4h/resistencia 1h 2441. Expira 48h. TP2 = referencia R/B. Recalculada 2026-10-18 00:01 con reglas bitget-futures-sim: R/B neto TP2 2.95, comisiones est. 0.122 EUR. CRO 18-oct 06:20: apalancamiento 1x->10x para liberar margen (riesgo en EUR sin cambios, SL igual); margen 17.05 USDT, liq 2666.31 (muy por encima del SL 2470). CRO 07:46: re-apalancada 10x->20x para liberar margen (riesgo EUR y SL sin cambios), margen 8.52 USDT, liq 2545.01."
+      "notas": "SIMULADA. Limit sell en pullback a EMA20 4h/resistencia 1h 2441. Expira 48h. TP2 = referencia R/B. Recalculada 2026-10-18 00:01 con reglas bitget-futures-sim: R/B neto TP2 2.95, comisiones est. 0.122 EUR. CRO 18-oct 06:20: apalancamiento 1x->10x para liberar margen (riesgo en EUR sin cambios, SL igual); margen 17.05 USDT, liq 2666.31 (muy por encima del SL 2470). CRO 07:46: re-apalancada 10x->20x para liberar margen (riesgo EUR y SL sin cambios), margen 8.52 USDT, liq 2545.01. CANCELADA 08:25 UTC por el COO (ronda 'con todo' de Daniel): liberar riesgo para setups del top de variacion; precio lejos de la entrada."
     },
     {
       "id": "T0002",
@@ -112,15 +118,15 @@ window.MESA_DATA = {
       "apalancamiento": "20",
       "margen_usdt": "64.51",
       "precio_liq": "109.531",
-      "estado": "pendiente",
-      "fecha_cierre": "",
+      "estado": "cancelada",
+      "fecha_cierre": "2026-10-18 08:26",
       "precio_cierre": "",
       "comisiones_eur": "",
       "funding_eur": "",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
-      "notas": "SIMULADA. prueba_nocturna. Turno de noche 18-oct 03:00 Madrid. Perfil extremo. Limit sell en pullback a EMA20 4h (104.78)/resistencia 105.15; tendencia 4h bajista (precio bajo EMA20/50/200, RSI4h 42) tras barrido de largos de las 21:00 UTC (~115M USD liquidados en 1h segun X). F&G 53 neutral, sin publicaciones de alto impacto de Trump/Fed/Musk/Saylor. Esceptico convencido con condicion: riesgo reducido al 5 % (no 10 %) por correlacion con el short de ETH T0001, fin de semana con poco volumen y liquidez por encima en BTC (82.2k-84.5k). SL 105.95 por encima de 105.76/105.92; TP2 101.55 sobre soporte 101.53. Liq aislado verificada con formula corregida (incluye comision de cierre): 113.01, muy por encima del SL. Expira 48h. BTC short descartado por el Esceptico (riesgo de squeeze hacia 82.2k). CRO 07:46: re-apalancada 12x->20x para liberar margen (riesgo EUR y SL sin cambios), margen 64.51 USDT, liq 109.531."
+      "notas": "SIMULADA. prueba_nocturna. Turno de noche 18-oct 03:00 Madrid. Perfil extremo. Limit sell en pullback a EMA20 4h (104.78)/resistencia 105.15; tendencia 4h bajista (precio bajo EMA20/50/200, RSI4h 42) tras barrido de largos de las 21:00 UTC (~115M USD liquidados en 1h segun X). F&G 53 neutral, sin publicaciones de alto impacto de Trump/Fed/Musk/Saylor. Esceptico convencido con condicion: riesgo reducido al 5 % (no 10 %) por correlacion con el short de ETH T0001, fin de semana con poco volumen y liquidez por encima en BTC (82.2k-84.5k). SL 105.95 por encima de 105.76/105.92; TP2 101.55 sobre soporte 101.53. Liq aislado verificada con formula corregida (incluye comision de cierre): 113.01, muy por encima del SL. Expira 48h. BTC short descartado por el Esceptico (riesgo de squeeze hacia 82.2k). CRO 07:46: re-apalancada 12x->20x para liberar margen (riesgo EUR y SL sin cambios), margen 64.51 USDT, liq 109.531. CANCELADA 08:25 UTC por el COO (ronda 'con todo' de Daniel): liberar riesgo para setups del top de variacion; precio lejos de la entrada."
     },
     {
       "id": "T0003",
@@ -166,15 +172,15 @@ window.MESA_DATA = {
       "apalancamiento": "20",
       "margen_usdt": "48.46",
       "precio_liq": "1.2333",
-      "estado": "abierta",
-      "fecha_cierre": "",
-      "precio_cierre": "",
-      "comisiones_eur": "",
+      "estado": "cerrada",
+      "fecha_cierre": "2026-10-18 08:26",
+      "precio_cierre": "1.2913",
+      "comisiones_eur": "1.033",
       "funding_eur": "-0.042",
-      "pnl_eur": "",
-      "r_multiple": "",
+      "pnl_eur": "-1.67",
+      "r_multiple": "-0.22",
       "esceptico": "convencido",
-      "notas": "SIMULADA. SESION AGRESIVA 18-oct. Major long #1. Rebote en soporte 1.2829-1.2885 (4h/1h) tras barrido a 1.2685; SL bajo minimos 1.2851 y soporte 1.2824. TP2 resistencia 1.3121. Vol 24h 137M, spread 0.8bp. Esceptico (sesion agresiva: solo veta sin stop logico o liquidez mala): convencido, stop tras swing/soporte y >1 ATR, liquidez OK. CRO: apalancamiento 6x->20x, margen 48.46 USDT, liq 1.2333."
+      "notas": "SIMULADA. SESION AGRESIVA 18-oct. Major long #1. Rebote en soporte 1.2829-1.2885 (4h/1h) tras barrido a 1.2685; SL bajo minimos 1.2851 y soporte 1.2824. TP2 resistencia 1.3121. Vol 24h 137M, spread 0.8bp. Esceptico (sesion agresiva: solo veta sin stop logico o liquidez mala): convencido, stop tras swing/soporte y >1 ATR, liquidez OK. CRO: apalancamiento 6x->20x, margen 48.46 USDT, liq 1.2333. Cierre anticipado por el COO: operacion mas floja (plana, R/B neto 1.63) para hacer sitio. Cierre: CIERRE MANUAL anticipado (mercado)."
     },
     {
       "id": "T0005",
@@ -256,6 +262,33 @@ window.MESA_DATA = {
       "r_multiple": "-0.98",
       "esceptico": "convencido",
       "notas": "SIMULADA. SESION AGRESIVA 18-oct. Alt short #2 (con LINK). Tendencia bajista -13.8 % 24h, maximos decrecientes 1h, bajo EMA20/50; SL sobre swing 0.6386. TP2 soporte 0.5755. Vol 24h 24M, spread 1.6bp. Esceptico (sesion agresiva: solo veta sin stop logico o liquidez mala): convencido, stop tras swing/soporte y >1 ATR, liquidez OK. CRO: apalancamiento 5x->20x, margen 16.61 USDT, liq 0.6564. Cierre: SL (mark)."
+    },
+    {
+      "id": "T0008",
+      "fecha_apertura": "2026-10-18 08:26",
+      "activo": "FILUSDT",
+      "mercado": "cripto",
+      "exchange": "bitget-futures-sim",
+      "direccion": "short",
+      "entrada": "1.0482",
+      "sl": "1.0575",
+      "tp1": "1.0374",
+      "tp2": "1.0208",
+      "tp3": "1.0201",
+      "tamano": "1685.2",
+      "riesgo_eur": "15.82",
+      "apalancamiento": "10",
+      "margen_usdt": "176.64",
+      "precio_liq": "1.1448",
+      "estado": "abierta",
+      "fecha_cierre": "",
+      "precio_cierre": "",
+      "comisiones_eur": "",
+      "funding_eur": "",
+      "pnl_eur": "",
+      "r_multiple": "",
+      "esceptico": "convencido",
+      "notas": "SIMULADA. SESION AGRESIVA (techo extremo) 08:25. Top variacion 24h (-8.8 %). Short FIL: 1h bajista (bajo EMA20/50, RSI 35), maximos decrecientes en 15m; SL 1.0575 sobre resistencia 1.0573 y maximos 15m. TP1 1.0374 soporte, TP2 1.0208 soporte 1h, TP3 1.0201. Vol 15M, spread 1bp. Esceptico: convencido (stop logico, liquidez OK)."
     }
   ],
   "informe": {
@@ -325,7 +358,7 @@ window.MESA_DATA = {
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
       "bocadillo": "Setups: 3 · S1 ETH short (mantener T0001)",
-      "tag": "BTC 81685.47"
+      "tag": "BTC 81687.3"
     },
     {
       "id": "oportunista",
@@ -370,8 +403,8 @@ window.MESA_DATA = {
       ],
       "metodo": "Disciplina de ejecución (checklist)",
       "accion": "teclear",
-      "bocadillo": "Abiertas: 4 · Pendientes: 2 · Cerradas: 1",
-      "tag": "PEND 2"
+      "bocadillo": "Abiertas: 4 · Pendientes: 0 · Cerradas: 2",
+      "tag": "OPEN 4"
     },
     {
       "id": "auditor",
@@ -385,7 +418,7 @@ window.MESA_DATA = {
       ],
       "metodo": "Revisión estadística post-trade",
       "accion": "papeles",
-      "bocadillo": "WR: 0.0 · PF: 0.0 · MDD: 1.96",
+      "bocadillo": "WR: 0.0 · PF: 0.0 · MDD: 2.62",
       "tag": "STATS"
     },
     {
@@ -421,22 +454,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 81685.47,
-      "cambio_pct": -0.05,
+      "precio": 81687.3,
+      "cambio_pct": -0.04,
       "fuente": "Binance",
-      "hora": "2026-10-18 08:08 UTC"
+      "hora": "2026-10-18 08:27 UTC"
     },
     "ETH": {
-      "precio": 2408.52,
-      "cambio_pct": -1.05,
+      "precio": 2410.57,
+      "cambio_pct": -1.0,
       "fuente": "Binance",
-      "hora": "2026-10-18 08:08 UTC"
+      "hora": "2026-10-18 08:27 UTC"
     },
     "SOL": {
-      "precio": 103.22,
-      "cambio_pct": -1.73,
+      "precio": 103.24,
+      "cambio_pct": -1.66,
       "fuente": "Binance",
-      "hora": "2026-10-18 08:08 UTC"
+      "hora": "2026-10-18 08:27 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -508,7 +541,7 @@ window.MESA_DATA = {
     },
     {
       "hora": "2026-10-17 23:39",
-      "msg": "EJEC · T0001 ETHUSDT short · pendiente"
+      "msg": "EJEC · T0001 ETHUSDT short · cancelada"
     },
     {
       "hora": "2026-10-17 23:39",
@@ -516,7 +549,7 @@ window.MESA_DATA = {
     },
     {
       "hora": "2026-10-18 01:10",
-      "msg": "EJEC · T0002 SOLUSDT short · pendiente"
+      "msg": "EJEC · T0002 SOLUSDT short · cancelada"
     },
     {
       "hora": "2026-10-18 01:10",
@@ -532,7 +565,7 @@ window.MESA_DATA = {
     },
     {
       "hora": "2026-10-18 07:47",
-      "msg": "EJEC · T0004 XRPUSDT long · abierta"
+      "msg": "EJEC · T0004 XRPUSDT long · cerrada"
     },
     {
       "hora": "2026-10-18 07:47",
@@ -563,16 +596,24 @@ window.MESA_DATA = {
       "msg": "ESCÉPTICO · T0007 veredicto: convencido"
     },
     {
+      "hora": "2026-10-18 08:26",
+      "msg": "EJEC · T0008 FILUSDT short · abierta"
+    },
+    {
+      "hora": "2026-10-18 08:26",
+      "msg": "ESCÉPTICO · T0008 veredicto: convencido"
+    },
+    {
       "hora": "2026-10-18 23:40",
-      "msg": "AUDITOR · equity 245.11 EUR · abiertas 4"
+      "msg": "AUDITOR · equity 243.44 EUR · abiertas 4"
     },
     {
-      "hora": "2026-10-18 08:08 UTC",
-      "msg": "TAPE · BTC 81685.47 (-0.05%) · 2026-10-18 08:08 UTC"
+      "hora": "2026-10-18 08:27 UTC",
+      "msg": "TAPE · BTC 81687.3 (-0.04%) · 2026-10-18 08:27 UTC"
     },
     {
-      "hora": "2026-10-18 08:08 UTC",
-      "msg": "TAPE · ETH 2408.52 (-1.05%) · 2026-10-18 08:08 UTC"
+      "hora": "2026-10-18 08:27 UTC",
+      "msg": "TAPE · ETH 2410.57 (-1.0%) · 2026-10-18 08:27 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -580,48 +621,12 @@ window.MESA_DATA = {
     }
   ],
   "pnl_vivo": {
-    "hora_utc": "2026-10-18 08:08:17 UTC",
+    "hora_utc": "2026-10-18 08:27:03 UTC",
     "eur_usd": 1.1253,
     "maker": 0.0002,
     "taker": 0.0006,
     "fuente": "Bitget v2 USDT-FUTURES mark price",
     "ops": [
-      {
-        "id": "T0001",
-        "activo": "ETHUSDT",
-        "direccion": "short",
-        "estado": "pendiente",
-        "entrada": 2435.0,
-        "tamano": 0.07,
-        "sl": "2470.0",
-        "tp2": "2324.0",
-        "apalancamiento": "20",
-        "margen_usdt": 8.52,
-        "riesgo_eur": "2.3",
-        "funding_eur": 0.0,
-        "fee_entrada": 0.0006,
-        "fee_salida": 0.0006,
-        "mark": 2407.57,
-        "pnl_eur": null
-      },
-      {
-        "id": "T0002",
-        "activo": "SOLUSDT",
-        "direccion": "short",
-        "estado": "pendiente",
-        "entrada": 104.9,
-        "tamano": 12.3,
-        "sl": "105.95",
-        "tp2": "101.55",
-        "apalancamiento": "20",
-        "margen_usdt": 64.51,
-        "riesgo_eur": "12.4",
-        "funding_eur": 0.0,
-        "fee_entrada": 0.0006,
-        "fee_salida": 0.0006,
-        "mark": 103.179,
-        "pnl_eur": null
-      },
       {
         "id": "T0003",
         "activo": "LINKUSDT",
@@ -637,26 +642,8 @@ window.MESA_DATA = {
         "funding_eur": 0.026,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 11.964,
-        "pnl_eur": -1.24
-      },
-      {
-        "id": "T0004",
-        "activo": "XRPUSDT",
-        "direccion": "long",
-        "estado": "abierta",
-        "entrada": 1.2922,
-        "tamano": 750.0,
-        "sl": "1.2825",
-        "tp2": "1.3121",
-        "apalancamiento": "20",
-        "margen_usdt": 48.46,
-        "riesgo_eur": "7.49",
-        "funding_eur": -0.042,
-        "fee_entrada": 0.0006,
-        "fee_salida": 0.0006,
-        "mark": 1.2912,
-        "pnl_eur": -1.74
+        "mark": 11.96,
+        "pnl_eur": -1.02
       },
       {
         "id": "T0005",
@@ -673,8 +660,8 @@ window.MESA_DATA = {
         "funding_eur": -0.009,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 78.665,
-        "pnl_eur": 1.02
+        "mark": 78.706,
+        "pnl_eur": 1.37
       },
       {
         "id": "T0006",
@@ -691,32 +678,50 @@ window.MESA_DATA = {
         "funding_eur": 0.003,
         "fee_entrada": 0.0006,
         "fee_salida": 0.0006,
-        "mark": 1.734,
-        "pnl_eur": -0.4
+        "mark": 1.732,
+        "pnl_eur": -0.66
+      },
+      {
+        "id": "T0008",
+        "activo": "FILUSDT",
+        "direccion": "short",
+        "estado": "abierta",
+        "entrada": 1.0482,
+        "tamano": 1685.2,
+        "sl": "1.0575",
+        "tp2": "1.0208",
+        "apalancamiento": "10",
+        "margen_usdt": 176.64,
+        "riesgo_eur": "15.82",
+        "funding_eur": 0.0,
+        "fee_entrada": 0.0006,
+        "fee_salida": 0.0006,
+        "mark": 1.0481,
+        "pnl_eur": -1.73
       }
     ],
-    "pnl_abierto_eur": -2.36
+    "pnl_abierto_eur": -2.04
   },
   "tags": {
     "sentimiento": "FEAR&GREED 53 Neutral",
     "macro": "RISK-OFF moderado, bajista …",
-    "trader": "BTC 81685.47",
+    "trader": "BTC 81687.3",
     "oportunista": "SQUEEZE?",
     "cro": "OK 2 · NO 1",
     "esceptico": "SÍ/NO",
-    "ejecucion": "PEND 2",
+    "ejecucion": "OPEN 4",
     "auditor": "STATS",
     "coo": "SIM 250€"
   },
   "cuenta": {
-    "equity": 245.11,
-    "pnl_realizado": -4.89,
+    "equity": 243.44,
+    "pnl_realizado": -6.56,
     "capital_inicial": 250.0,
     "capital_invertido": 250.0,
-    "riesgo_abierto_eur": 44.69,
+    "riesgo_abierto_eur": 38.32,
     "moneda": "EUR",
     "abiertas": 4,
-    "pendientes": 2
+    "pendientes": 0
   },
   "configuracion": {
     "capital_inicial": 250.0,
@@ -746,7 +751,7 @@ window.MESA_DATA = {
       "aprobado_por": "Daniel 2026-10-17"
     },
     "win_rate_pct": 0.0,
-    "operaciones_cerradas": 1,
+    "operaciones_cerradas": 2,
     "perfiles": {
       "Conservador": {
         "riesgo_pct": 0.5,
