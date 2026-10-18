@@ -7,8 +7,8 @@
 <script>
 /* generado por build_web.py — no editar a mano */
 window.MESA_DATA = {
-  "generado_utc": "2026-10-18 00:01 UTC",
-  "aviso": "MODO SIMULACIÓN — nada garantiza beneficios",
+  "generado_utc": "2026-10-18 00:02 UTC",
+  "aviso": "MODO SIMULACIÓN (bitget-futures-sim) — nada garantiza beneficios",
   "proyecto": "Mesa de Trading (Daniel) - MODO SIMULACION / paper trading",
   "modo": "simulacion",
   "config": {
@@ -65,22 +65,27 @@ window.MESA_DATA = {
       "fecha_apertura": "2026-10-17 23:39",
       "activo": "ETHUSDT",
       "mercado": "cripto",
+      "exchange": "bitget-futures-sim",
       "direccion": "short",
       "entrada": "2435.0",
       "sl": "2470.0",
       "tp1": "2394.0",
       "tp2": "2324.0",
       "tp3": "2300.0",
-      "tamano": "0.0803786",
-      "riesgo_eur": "2.5",
-      "apalancamiento": "0.70",
+      "tamano": "0.07",
+      "riesgo_eur": "2.3",
+      "apalancamiento": "1",
+      "margen_usdt": "170.45",
+      "precio_liq": "4850.6",
       "estado": "pendiente",
       "fecha_cierre": "",
       "precio_cierre": "",
+      "comisiones_eur": "",
+      "funding_eur": "",
       "pnl_eur": "",
       "r_multiple": "",
       "esceptico": "convencido",
-      "notas": "SIMULADA. Limit sell en pullback a EMA20 4h/resistencia 1h 2441. Expira 48h. TP2 = referencia R/B."
+      "notas": "SIMULADA. Limit sell en pullback a EMA20 4h/resistencia 1h 2441. Expira 48h. TP2 = referencia R/B. Recalculada 2026-10-18 00:01 con reglas bitget-futures-sim: R/B neto TP2 2.95, comisiones est. 0.122 EUR."
     }
   ],
   "informe": {
@@ -152,7 +157,7 @@ window.MESA_DATA = {
       "metodo": "Renaissance (estadística y ventaja probada)",
       "accion": "graficos",
       "bocadillo": "Setups: 4 · S1 ETH short (limit)",
-      "tag": "BTC 81428.49"
+      "tag": "BTC 81409.14"
     },
     {
       "id": "oportunista",
@@ -248,22 +253,22 @@ window.MESA_DATA = {
   ],
   "precios": {
     "BTC": {
-      "precio": 81428.49,
-      "cambio_pct": -0.21,
+      "precio": 81409.14,
+      "cambio_pct": -0.24,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:01 UTC"
+      "hora": "2026-10-18 00:02 UTC"
     },
     "ETH": {
-      "precio": 2400.49,
-      "cambio_pct": -0.9,
+      "precio": 2398.94,
+      "cambio_pct": -0.96,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:01 UTC"
+      "hora": "2026-10-18 00:02 UTC"
     },
     "SOL": {
-      "precio": 103.37,
-      "cambio_pct": -1.0,
+      "precio": 103.3,
+      "cambio_pct": -1.06,
       "fuente": "Binance",
-      "hora": "2026-10-18 00:01 UTC"
+      "hora": "2026-10-18 00:02 UTC"
     },
     "SPY": {
       "precio": 763.25,
@@ -354,12 +359,12 @@ window.MESA_DATA = {
       "msg": "AUDITOR · equity 250.0 EUR · abiertas 0"
     },
     {
-      "hora": "2026-10-18 00:01 UTC",
-      "msg": "TAPE · BTC 81428.49 (-0.21%) · 2026-10-18 00:01 UTC"
+      "hora": "2026-10-18 00:02 UTC",
+      "msg": "TAPE · BTC 81409.14 (-0.24%) · 2026-10-18 00:02 UTC"
     },
     {
-      "hora": "2026-10-18 00:01 UTC",
-      "msg": "TAPE · ETH 2400.49 (-0.9%) · 2026-10-18 00:01 UTC"
+      "hora": "2026-10-18 00:02 UTC",
+      "msg": "TAPE · ETH 2398.94 (-0.96%) · 2026-10-18 00:02 UTC"
     },
     {
       "hora": "2026-10-16 20:15 UTC",
@@ -369,7 +374,7 @@ window.MESA_DATA = {
   "tags": {
     "sentimiento": "FEAR&GREED 55 Greed",
     "macro": "RISK-OFF moderado / bajista…",
-    "trader": "BTC 81428.49",
+    "trader": "BTC 81409.14",
     "oportunista": "SQUEEZE?",
     "cro": "OK 1 · NO 3",
     "esceptico": "SÍ/NO",
@@ -382,7 +387,7 @@ window.MESA_DATA = {
     "pnl_realizado": 0,
     "capital_inicial": 250.0,
     "capital_invertido": 250.0,
-    "riesgo_abierto_eur": 2.5,
+    "riesgo_abierto_eur": 2.3,
     "moneda": "EUR",
     "abiertas": 0,
     "pendientes": 1
